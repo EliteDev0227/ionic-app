@@ -1,0 +1,110 @@
+page-rentdetails {
+  .toolbar-title-md {
+    color: #fff;
+    font-weight: bold;
+  }
+
+  .content {
+    background: white !important;
+  }
+
+  .item {
+    border-bottom: 1px solid #ddd !important;
+    background: #fff !important;
+  }
+
+  ion-label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .elencoTxt {
+    width: 75%;
+  }
+
+  .item-md.item-block .item-inner {
+    height: auto !important;
+  }
+
+  .top_img {
+    max-width: 100%;
+    height: auto;
+    width: 100%;
+    border-bottom: solid white;
+    border-top: solid white;
+  }
+
+  .cta {
+    background: #0db4e1;
+    margin-top: -4px;
+    color: white !important;
+  }
+
+  .cat a {
+    font-size: 3em;
+    color: white;
+  }
+
+  .cta .cta-label {
+    color: #fff !important;
+    font-weight: bold;
+    font-family: "Open Sans";
+  }
+
+  .cat-icon {
+    font-size: 2.5rem;
+    color: white !important;
+  }
+
+  .restroName {
+    color: #737070;
+    padding-bottom: 5px;
+    white-space: normal;
+    font-size: 2.1rem;
+    font-weight: normal;
+  }
+
+
+  .list-md .item-block .item-inner {
+    border: none !important;
+  }
+  .modal_back {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    z-index: 999;
+
+  }
+
+  .modal_page {
+    z-index: 9999;
+    position: absolute;
+    width: 100%;
+    top: 1%;
+    background: rgba(255, 255, 255, 0.9);
+    padding-top: 20px;
+  }
+
+  .modal_title {
+    text-align: center;
+    font-size: 1.7rem;
+    padding: 10px;
+    font-weight: bold;
+  }
+
+  .modal_content {
+    padding: 10px;
+    line-height: 2.5rem;
+  }
+
+  .modal_phone {
+    padding: 10px;
+  }
+
+  .modal_button {
+    padding: 30px;
+  }
+
+}

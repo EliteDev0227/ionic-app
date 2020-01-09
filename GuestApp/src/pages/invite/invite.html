@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-navbar color="custom">
+    <ion-title>Invite Others</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content no-padding>
+
+  <div class="modal_back" *ngIf="inviteFlag">
+    <div class="modal_page" *ngIf="inviteResFlag">
+      <div class="modal_title">
+          <img src="./assets/imgs/check.png" class="flag-icon">
+        <p>Success</p>
+      </div>
+      <div class="modal_button">
+        <button ion-button round full color="mainbtn" (click)="confirmDone()"> I'm Done</button>
+        <button ion-button round full color="danger" (click)="keepInvite()">Keep Inviting</button>
+      </div>
+    </div>
+    <div class="modal_page" *ngIf="!inviteResFlag">
+        <div class="modal_title">
+            <img src="./assets/imgs/cancel.png" class="flag-icon">
+          <p style="color: red">ERROR</p>
+        </div>
+        <div class="modal_button">
+          <button ion-button round full color="mainbtn" (click)="closeBtn()">Close</button>
+          <button ion-button round full color="danger" (click)="retryButton()">Retry</button>
+        </div>
+      </div>
+  </div>
+
+  <div class="top_content">
+    <p>Your can share the app with other quests in your party and aloow them to view rental information, local
+      attractions, promitions and more</p>
+  </div>
+  <div class="mid_content">
+    <p>Guest List</p>
+  </div>
+
+  <div class="end_content">
+    <div class="end_content_title" (click)="addGuest()">
+      <div class="new_guest">
+        <i class="fa fa-plus-circle" aria-hidden="true"></i>
+        <p>Add New</p>
+      </div>
+    </div>
+  </div>
+  <div class="guest_content">
+    <div class="end_content_title" *ngFor="let user  of userList let idx=index">
+      <div class="new_guest">
+        <i class="fa fa-circle" aria-hidden="true" [ngClass]="user.signed === 0 ? 'ungsign' : 'sign'"></i>
+        <p>{{user.guest_name}}</p>
+      </div>
+      <div class="sub_end_content" (click)="viewGuestData(idx)">
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </div>
+    </div>
+  </div>
+</ion-content>

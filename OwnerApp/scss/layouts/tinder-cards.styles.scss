@@ -1,0 +1,99 @@
+.tinder-cards-view
+{
+
+  background: $content-bg;
+
+  td-cards
+  {
+    display: block;
+  }
+
+  td-card
+  {
+    position: absolute;
+    left: 50%;
+    margin-top: 80px;
+    margin-bottom: 40px;
+    margin-left: -150px;
+    width: 300px;
+    border: 1px solid #999;
+    box-shadow: 0px 1px 3px rgba(0,0,0,0.2);
+    border-radius: 6px;
+    background: white;
+  }
+
+  td-card .image
+  {
+    position: relative;
+  }
+
+  td-card img
+  {
+    max-width: 100%;
+    width: 300px;
+  }
+
+  td-card .title
+  {
+    background: #FFF;
+    font-size: 16px;
+    padding: 15px;
+    text-transform: capitalize;
+    text-align:center;
+  }
+
+  /* Overlay styling*/
+
+  .overlayBox
+  {
+    position: absolute;
+    left: 50%;
+    height: 98%;
+    width: 100%;
+    top: -80px;
+    opacity: 0;
+    margin: 80px 0 0 -149px;
+  }
+
+  .boxed
+  {
+    height: 50px;
+    width: 100px;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 30px;
+  }
+
+  .yes-text
+  {
+    text-align: center;
+  }
+
+  .yesBox
+  {
+    margin: 10% 60% 0% 10%;
+    border: 2px solid $balanced;
+    color: $balanced;
+    -webkit-transform: rotate(-25deg);
+  }
+
+  .no-text
+  {
+    text-align: center;
+  }
+
+  .noBox
+  {
+    margin: 10% 10% 0% 60%;
+    border: 2px solid $assertive;
+    color: $assertive;
+    -webkit-transform: rotate(25deg);
+  }
+
+  .fade
+  {
+    -webkit-transition: 0.2s opacity linear;
+    transition: 0.2s opacity linear;
+    opacity: 0;
+  }
+}

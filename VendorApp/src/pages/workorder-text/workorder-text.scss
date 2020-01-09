@@ -1,0 +1,104 @@
+page-workorder-text {
+  .modal_page {
+    width: 100%;
+    margin-top: 3vh;
+    background: white;
+    border-radius: 5px;
+    margin-bottom: 12vh;
+  }
+
+  .modal_title {
+    text-align: center;
+    font-size: 1.7rem;
+    padding: 10px;
+    font-weight: bold;
+  }
+
+  .modal_content {
+    padding: 10px;
+    line-height: 2.5rem;
+  }
+
+  .modal_button {
+    padding: 20px;
+
+    button {
+      height: 4rem;
+      width: 50%;
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
+  }
+
+  .scroll-content {
+    background: transparent !important;
+  }
+
+  .content {
+    background: transparent !important;
+  }
+
+  .top_bar {
+    display: flex;
+    background: #008bc5;
+    font-size: 2rem;
+  }
+
+  .top_sub {
+    flex: 5;
+    color: white;
+
+    p {
+      text-align: center;
+      margin: 3%;
+    }
+
+    ;
+  }
+
+  .top_sub_btn {
+    flex: 1;
+    color: white;
+    font-size: 2.5rem;
+    margin: auto;
+
+    .close_btn {
+      font-size: 2.3rem;
+      text-align: right;
+      margin-right: 1rem !important;
+    }
+  }
+
+  .top_content {
+    text-align: center;
+    font-family: "MuseoSans500";
+    font-size: 2.2em;
+    color: #058CC3;
+    margin-top: 2vh;
+
+    img {
+      opacity: 0.7;
+      height: 4rem;
+    }
+  }
+
+  .mid_content {
+
+    p {
+      margin: 1rem;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    .item-inner {
+      border: 1px solid #ddd !important;
+      margin: 1rem;
+      padding-left: 1rem;
+      border-radius: 1rem;
+    }
+
+    .item {
+      padding: 0px;
+    }
+  }
+}

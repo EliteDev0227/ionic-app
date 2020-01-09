@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-navbar color="custom">
+    <ion-title>Siebert Blog</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content no-padding>
+  <ion-card *ngFor="let blog of blogData let idx=index">
+    <ion-item class="blog_tile">
+      <ion-avatar item-start>
+        <img src="./assets/imgs/blog/blog.png">
+      </ion-avatar>
+      <div class="card_title">{{blog.title}}</div>
+      <div class="card_sub_title">By {{blog.author.nickname}} {{blog.date | amTimeAgo}}</div>
+    </ion-item>
+    <ion-item >
+      <div [innerHTML]="blog.shortContent"></div>
+    </ion-item>
+    <div class="mainCont">
+      <div class="subCont1" (click)="bookmarkPost(blog)">
+        <ion-icon ios="ios-bookmark" md="md-bookmark"></ion-icon>
+      </div>
+      <div class="subCont2" (click)="viewPostData(blog)">
+        <button ion-button block small class="confirm_btn">Read more</button>
+      </div>
+    </div>
+  </ion-card>
+  <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+      <ion-infinite-scroll-content
+      loadingSpinner="bubbles"
+      loadingText="Loading more data...">
+      </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
+</ion-content>

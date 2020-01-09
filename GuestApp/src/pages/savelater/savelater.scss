@@ -1,0 +1,107 @@
+page-savelater {
+  .toolbar-title-md {
+    color: #fff;
+    font-weight: bold;
+  }
+
+  .content{
+    background: white !important;
+  }
+
+  .button-inner {
+    background-image: url("../assets/imgs/menu.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 30px;
+    max-width: 25px;
+  }
+
+  .back-button-icon-md {
+    display: none;
+  }
+
+  .content_tile {
+    font-size: 1.4rem;
+    border-bottom: solid 1px #eee;
+    height: 30px;
+    padding-top: 7px;
+    padding-left: 10px;
+    background: #046580;
+    color: #fff;
+    // padding: 5px 25px;
+
+  }
+
+  .elencoImg img {
+    border-radius: 50%;
+    width: 65px !important;
+    height: 65px !important;
+    margin-left: 3vh;
+  }
+
+  .elencoTxt {
+    width: 75%;
+    margin-left: 2vh;
+  }
+
+  .restroName {
+    font-size: 2.5vh;
+    color: #0db4e1;
+    padding-bottom: 5px;
+    white-space: normal;
+  }
+
+  .restroDes {
+    font-size: 1.8vh;
+    padding-bottom: 5px;
+    color: #999999;
+    white-space: normal;
+  }
+
+  .restroNum {
+    color: #999999;
+    font-size: 1.8vh;
+  }
+
+
+  .item-md {
+    padding-top: 15px;
+    border-bottom: none !important;
+    background: #fff !important;
+    padding-left: 0px;
+  }
+
+  ion-label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .item-md.item-block .item-inner {
+    border-bottom: none !important;
+    border-top: none !important;
+    height: auto !important;
+    background: #f1f2f2;
+    margin-right: 0px !important;
+  }
+
+  .list-md>.item-block:last-child .item-inner {
+    height: auto !important;
+    padding-right: 0px;
+    margin-right: 0px;
+  }
+
+  .item-ios {
+    background: #f1f2f2 !important;
+    color: #615c5c !important;
+  }
+
+  .back-button-text-ios {
+    display: none !important;
+  }
+
+  .back-button-icon-ios {
+    opacity: 0;
+  }
+}

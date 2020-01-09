@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-navbar color="custom">
+    <ion-title>Siebert Coupons</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content no-padding>
+  <ion-card *ngFor="let promo of promotions">
+    <ion-item >
+      <img src="{{promo.image}}">
+    </ion-item>
+    <div class="setting_btn">
+      <button ion-button round full color="promobtn" class="dealBtn" (click)="goViewData(promo.url)" >View Deal</button>
+    </div>
+  </ion-card>
+</ion-content>

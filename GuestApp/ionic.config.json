@@ -1,0 +1,7 @@
+{
+  "name": "siebert",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

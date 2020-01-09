@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar color="custom">
+    <ion-title>Frequently Asked Questions</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content no-padding>
+    <ion-list>
+      <div *ngFor="let group of groups; let idx=index" style="border-bottom: 1px solid #ddd">
+        <ion-item (click)="toggleGroup(group, idx)" [id]="'select_' + idx" >
+          <ion-icon ios="ios-add" md="md-add" *ngIf="group.show==false"> </ion-icon>
+          <ion-icon ios="ios-remove" md="md-remove" *ngIf="group.show==true"></ion-icon>
+          {{group.name}}
+        </ion-item>
+        <ion-item  *ngIf="group.show==true" class="item-accordion" [innerHTML]="group.items" ></ion-item>
+      </div>
+    </ion-list>
+    <div class="contact_title">
+      <p style="text-align: center">Have a question not listed? Ask us now!</p>
+    </div>
+    <div class="signin_signinbtn">
+      <button ion-button round full color="mainbtn" (click)="contact()">
+        Contact Us
+      </button>
+    </div>
+
+  </ion-content>

@@ -1,0 +1,48 @@
+
+{
+    "GuestInfo": [
+        {
+            "firstName": "Kathryn",
+            "lastName": "Nelson",
+            "address1": "8275 Teahen Road",
+            "address2": null,
+            "city": "Brighton",
+            "state": "MI",
+            "zip": "48116",
+            "phoneOne": null,
+            "phoneTwo": null,
+            "phoneThree": "810-623-1339",
+            "phoneFour": null,
+            "Email": "k.s.nelson@icloud.com"
+        }
+    ],
+    "ReservationHistory": [
+        {
+            "arrivalDate": "5/23/2015",
+            "departureDate": "5/30/2015",
+            "unitID": "CE311",
+            "unitName": "Sea Escape",
+            "unitImage": "https://www.siebert-realty.com/units/pics/CE311.jpg",
+            "nights": 7,
+            "Code": "CG"
+        },
+        {
+            "arrivalDate": "10/1/2016",
+            "departureDate": "10/8/2016",
+            "unitID": "CE109",
+            "unitName": "Coastal Corner Oceanfront",
+            "unitImage": "https://www.siebert-realty.com/units/pics/CE109.jpg",
+            "nights": 7,
+            "Code": "CG"
+        },
+        {
+            "arrivalDate": "12/19/2017",
+            "departureDate": "12/26/2017",
+            "unitID": "CE109",
+            "unitName": "Coastal Corner Oceanfront",
+            "unitImage": "https://www.siebert-realty.com/units/pics/CE109.jpg",
+            "nights": 7,
+            "Code": "NP"
+        }
+    ]
+}

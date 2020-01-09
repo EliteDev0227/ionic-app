@@ -1,0 +1,31 @@
+<ion-content padding>
+  <div class="modal_page">
+    <div class="top_bar">
+      <div class="top_sub">
+        <p>Contact</p>
+      </div>
+      <div class="top_sub_btn">
+        <div class="close_btn" (click)="closeBtn()">
+          <ion-icon ios="ios-close" md="md-close"></ion-icon>
+        </div>
+      </div>
+    </div>
+    <div class="top_content">
+        <img src="assets/imgs/siebert.png" />
+    </div>
+    <div class="mid_content">
+      <ion-item>
+        <ion-label>Phone Number</ion-label>
+        <ion-select [(ngModel)]="phoneNumber" name="phoneNumber">
+          <ion-option *ngFor="let phone of phones; let i = index" [value]="phone.num">{{phone.id}}:{{phone.number}}</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+          <ion-textarea #myInput id="myInput" rows="7" maxLength="500" (keyup)="resize()" [(ngModel)]="textNote" placeholder="Details about your content."></ion-textarea>
+        </ion-item>
+    </div>
+    <div class="modal_button">
+      <button ion-button round full color="mainbtn" (click)="confirm()">Send</button>
+    </div>
+  </div>
+</ion-content>

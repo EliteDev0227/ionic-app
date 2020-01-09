@@ -1,0 +1,198 @@
+[
+	{
+		"id":"news",
+		"title":"News",
+		"image":"img/feeds/news.jpg",
+		"feed_sources":[
+			{
+				"id":"bbc",
+				"title":"BBC",
+				"description":"The latest stories from the World section of the BBC News web site.",
+				"image":"img/feeds/logos/bbc.jpg",
+				"url":"https://feeds.bbci.co.uk/news/world/rss.xml"
+			},
+			{
+				"id":"reuters",
+				"title":"Reuters",
+				"description":"Reuters.com is your source for breaking news, business, financial and investing news, including personal finance and stocks. Reuters is the leading global provider of news, financial information and technology solutions to the world's media, financial institutions, businesses and individuals.",
+				"image":"img/feeds/logos/reuters.jpg",
+				"url":"http://feeds.reuters.com/Reuters/worldNews"
+			},
+			{
+				"id":"cnn",
+				"title":"CNN",
+				"description":"CNN.com delivers up-to-the-minute news and information on the latest top stories, weather, entertainment, politics and more.",
+				"image":"img/feeds/logos/cnn.jpg",
+				"url":"http://rss.cnn.com/rss/cnn_world.rss"
+			},
+			{
+				"id":"the-guardian",
+				"title":"The Guardian",
+				"description":"Latest World news, comment and analysis from the Guardian, the world's leading liberal voice",
+				"image":"img/feeds/logos/the-guardian.jpg",
+				"url":"http://www.theguardian.com/world/rss"
+			}
+		]
+	},
+	{
+		"id":"sports",
+		"title":"Sports",
+		"image":"img/feeds/sports.jpg",
+		"feed_sources":[
+			{
+				"id":"the-guardian",
+				"title":"The Guardian",
+				"description":"Latest news and features from theguardian.com, the world's leading liberal voice",
+				"image":"img/feeds/logos/the-guardian.jpg",
+				"url":"http://www.theguardian.com/sport/rss"
+			},
+			{
+				"id":"bbc",
+				"title":"BBC",
+				"description":"The latest stories from the Sport section of the BBC Sport web site.",
+				"image":"img/feeds/logos/bbc.jpg",
+				"url":"https://feeds.bbci.co.uk/sport/0/rss.xml"
+			},
+			{
+				"id":"fox-sports",
+				"title":"FOX Sports",
+				"description":"FOX Sports Generic Content Feed",
+				"image":"img/feeds/logos/fox-sports.jpg",
+				"url":"https://api.foxsports.com/v1/rss?partnerKey=zBaFxRyGKCfxBagJG9b8pqLyndmvo7UU"
+			},
+			{
+				"id":"espn",
+				"title":"ESPN",
+				"description":"Latest news from ESPN.com",
+				"image":"img/feeds/logos/espn.jpg",
+				"url":"http://sports.espn.go.com/espn/rss/news"
+			}
+		]
+	},
+	{
+		"id":"business",
+		"title":"Business",
+		"image":"img/feeds/business.jpg",
+		"feed_sources":[
+			{
+				"id":"forbes",
+				"title":"Forbes",
+				"description":"Forbes - Business",
+				"image":"img/feeds/logos/forbes.jpg",
+				"url":"http://www.forbes.com/business/feed/"
+			},
+			{
+				"id":"reuters",
+				"title":"Reuters",
+				"description":"Reuters.com is your source for breaking news, business, financial and investing news, including personal finance and stocks. Reuters is the leading global provider of news, financial information and technology solutions to the world's media, financial institutions, businesses and individuals.",
+				"image":"img/feeds/logos/reuters.jpg",
+				"url":"http://feeds.reuters.com/reuters/businessNews"
+			},
+			{
+				"id":"the-economist",
+				"title":"The Economist",
+				"description":"The Economist business and finance",
+				"image":"img/feeds/logos/the-economist.jpg",
+				"url":"https://www.economist.com/sections/business-finance/rss.xml"
+			},
+			{
+				"id":"inc",
+				"title":"Inc.",
+				"description":"Advice for founders of start-ups and start-up entrepreneurs on writing a business plan, running a home-based business, naming a start-up business, how to incorporate, financing a start-up, buying a small business, and starting a franchise.",
+				"image":"img/feeds/logos/inc.jpg",
+				"url":"https://feeds.feedburner.com/inc/channel/start-up"
+			}
+		]
+	},
+	{
+		"id":"entertainment",
+		"title":"Entertainment",
+		"image":"img/feeds/entertainment.jpg",
+		"feed_sources":[
+			{
+				"id":"the-hollywood-reporter",
+				"title":"The Hollywood Reporter",
+				"description":"The Hollywood Reporter news",
+				"image":"img/feeds/logos/the-hollywood-reporter.jpg",
+				"url":"https://feeds.feedburner.com/thr/news"
+			},
+			{
+				"id":"tmz",
+				"title":"TMZ",
+				"description":"Celebrity Gossip and Entertainment News, Covering Celebrity News and Hollywood Rumors. Get All The Latest Gossip at TMZ - Thirty Mile Zone.",
+				"image":"img/feeds/logos/tmz.jpg",
+				"url":"https://www.tmz.com/rss.xml"
+			},
+			{
+				"id":"the-guardian",
+				"title":"The Guardian",
+				"description":"Latest news and features from theguardian.com, the world's leading liberal voice",
+				"image":"img/feeds/logos/the-guardian.jpg",
+				"url":"http://www.theguardian.com/culture/rss"
+			}
+		]
+	},
+	{
+		"id":"politics",
+		"title":"Politics",
+		"image":"img/feeds/politics.jpg",
+		"feed_sources":[
+			{
+				"id":"bbc",
+				"title":"BBC",
+				"description":"The latest stories from the World section of the BBC News web site.",
+				"image":"img/feeds/logos/bbc.jpg",
+				"url":"https://feeds.bbci.co.uk/news/world/rss.xml"
+			},
+			{
+				"id":"the-nation",
+				"title":"The Nation",
+				"description":"The Nation politics news",
+				"image":"img/feeds/logos/the-nation.jpg",
+				"url":"http://www.thenation.com/blogs/rss/politics"
+			},
+			{
+				"id":"washington-post",
+				"title":"Washington Post",
+				"description":"Post Politics from The Washington Post is the source for political news headlines, in-depth politics coverage and political opinion, plus breaking news on the Obama administration and White House, Congress, the Supreme Court, elections and more.",
+				"image":"img/feeds/logos/washington-post.jpg",
+				"url":"http://feeds.washingtonpost.com/rss/politics"
+			},
+			{
+				"id":"reuters",
+				"title":"Reuters",
+				"description":"Reuters.com is your source for breaking news, business, financial and investing news, including personal finance and stocks. Reuters is the leading global provider of news, financial information and technology solutions to the world's media, financial institutions, businesses and individuals.",
+				"image":"img/feeds/logos/reuters.jpg",
+				"url":"http://feeds.reuters.com/Reuters/PoliticsNews"
+			}
+		]
+	},
+	{
+		"id":"technology",
+		"title":"Technology",
+		"image":"img/feeds/technology.jpg",
+		"feed_sources":[
+			{
+				"id":"techcrunch",
+				"title":"TechCrunch",
+				"description":"Startup and Technology News",
+				"image":"img/feeds/logos/techcrunch.jpg",
+				"url":"https://feeds.feedburner.com/TechCrunch/social"
+			},
+			{
+				"id":"techradar",
+				"title":"Techradar",
+				"description":"Get all the latest tech news from Techradar.com",
+				"image":"img/feeds/logos/techradar.jpg",
+				"url":"https://feeds2.feedburner.com/techradar/allnews"
+			},
+			{
+				"id":"cnet",
+				"title":"CNET",
+				"description":"CNET news editors and reporters provide top technology news, with investigative reporting and in-depth coverage of tech issues and events",
+				"image":"img/feeds/logos/cnet.jpg",
+				"url":"http://www.cnet.com/rss/news/"
+			}
+		]
+	}
+]

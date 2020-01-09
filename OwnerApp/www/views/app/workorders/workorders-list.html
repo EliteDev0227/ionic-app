@@ -1,0 +1,109 @@
+<ion-view class="profile-view">
+  <style>
+    .bar.app-top-bar .title *, .bar.app-top-bar .button *{text-transform: capitalize}
+    .profile-view .top-content h2 {
+      position: absolute;
+      bottom: 3px;
+      right: 0;
+      padding: 0 13px;
+      color: white;
+      text-transform: capitalize;
+    }
+    .profile-view .top-content {
+
+      margin-bottom: 0;
+    }
+  </style>
+
+  <ion-nav-title>
+    <span>{{unit.UnitName}} Workorders</span>
+
+  </ion-nav-title>
+  <ion-nav-buttons side="right">
+    <button class="button button-icon button-clear"  menu-toggle="right">
+      <i class="fa fa-filter"></i>
+    </button>
+  </ion-nav-buttons>
+
+  <ion-content>
+    <ion-refresher pulling-text="Pull to refresh..." on-refresh="doRefresh()">
+    </ion-refresher>
+
+    <div ng-if="!workorders.length" class="row">
+      There's nothing here to see.
+    </div>
+
+    <ion-slide-box ng-if="workorders.length" slide-tabs-scrollable="false"  show-pager="false" ion-slide-tabs>
+      <ion-slide ion-slide-tab-label="Open">
+
+        <div class="list">
+          <div ng-repeat="job in workorders  | filter: { woStatus: 'Objs/Open.gif' }" ng-click="workorderDetails(job.woNum)" class="item item-icon-left" >
+            <i class="icon fa fa-clock assertive"></i>
+            <h2>{{job.woDesc}}</h2>
+            <p>{{job.woDate}}</p>
+          </div>
+
+
+        </div>
+      </ion-slide>
+      <ion-slide ion-slide-tab-label="History">
+        <div class="list">
+          <div  ng-repeat="job in workorders  | filter: { woStatus: 'Objs/Closed.gif' }" ng-click="workorderDetails(job.woNum)" class="item item-icon-left" >
+            <i class="icon ion-checkmark-circled"></i>
+            <h2>{{job.woDesc}}</h2>
+            <p>{{job.woDate}}</p>
+          </div>
+        </div>
+      </ion-slide>
+      <ion-slide ion-slide-tab-label="Request Workorder">
+        <form>
+<div class="row item ">
+
+          <div class="col">
+      
+            <label for="">Title</label>
+            <input class="button button-block button-dark" type="text"  ng-model="wor.title">
+          </div>
+</div>
+
+          <div class="row item ">
+          <div class="col">
+            <label for="">Description</label>
+            <textarea ng-model="wor.description" style="width: 100%" class="button button-block button-dark"> </textarea>
+          </div>
+</div>
+          
+          <div class="row item ">
+          <div class="col">
+            <select ng-model="wor.location" class="button button-dark button-block light">
+              <option value="" disabled="" selected="">Location</option>
+
+              <option value="Bathroom">Bathroom</option>
+              <option value="Bedroom">Bedroom</option>
+              <option value="Kitchen">Kitchen</option>
+              <option value="Outside">Outside</option>
+              <option value="Garage">Garage</option>
+              <option value="Other">Other</option>            </select>
+          </div>
+</div>
+           <div class="row item ">
+          <div class="col">
+            <label for="">Who would you like to perform this work?</label>
+            <ion-radio ng-model="wor.workby" ng-value="SIEBERT">Siebert</ion-radio>
+            <ion-radio ng-model="wor.workby" ng-value="VENDOR">Vendor</ion-radio>
+
+          </div>
+</div>
+
+<div class="row item ">
+          <div class="col">
+            <button class="button button-block button-dark" type="text"  ng-click="sendWorkOrderRequest()"> Submit my Request</button>
+
+
+          </div>
+</div>
+
+        </form>
+
+  </ion-content>
+</ion-view>

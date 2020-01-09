@@ -1,0 +1,23 @@
+page-forgotpwd {
+    ion-content {
+        background-image: url("../assets/imgs/bg-back.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center bottom;
+    }
+   
+    .forgot_controllers {
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+        display: flex;
+        div {
+            width: 100%;
+            padding: 0 10px;
+            flex: 1;
+            button {
+                width: 100%;
+            }
+        }
+    }
+}

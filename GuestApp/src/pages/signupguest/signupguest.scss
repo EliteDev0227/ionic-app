@@ -1,0 +1,51 @@
+page-signupguest {
+  ion-content {
+    background-image: url("../assets/imgs/bg-back.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+  }
+
+  .signup_avatar {
+    width: 100%;
+    text-align: center;
+
+    img {
+      width: 80px;
+      height: 80px;
+      border-radius: 200px;
+    }
+  }
+
+  .signup_controllers {
+    display: flex;
+
+    div {
+      flex: 1;
+      padding: 20px;
+      text-align: center;
+    }
+  }
+
+  .confirm_btn {
+    text-transform: none;
+  }
+
+  .scroll-content {
+    overflow-x: unset;
+    overflow-y: hidden;
+  }
+  .main_cont {
+    color: #058CC3;
+
+    ion-input {
+      border: 1px solid #ddd;
+      margin-top: 1rem;
+      border-radius: 1rem;
+      padding-left: 1rem;
+      font-weight: bold;
+      font-size: 1.5rem;
+
+    }
+  }
+}

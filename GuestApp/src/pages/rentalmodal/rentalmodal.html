@@ -1,0 +1,13 @@
+<ion-content padding>
+    <div class="modal_page">
+        <div class="close_btn" (click)="closeBtn()"><ion-icon ios="ios-close" md="md-close"></ion-icon></div>
+        <div class="modal_title">{{modal_content.title}}</div>
+        <div class="modal_content" *ngIf="!viewHtmlShow">{{modal_content.des}}</div>
+        <div class="modal_content" *ngIf="viewHtmlShow" [innerHTML]="modal_content.des"></div>
+
+        <div class="modal_button">
+            <button ion-button round full color="mainbtn" (click)="confirm()"> OK</button>
+        </div>
+    </div>
+</ion-content>
+

@@ -1,0 +1,66 @@
+.login-view
+{
+	// Fix tabs animation on iOS
+	// Fix initial blink before angular loaded: http://stackoverflow.com/a/14076004/1116959
+	[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak
+	{
+	  display: none !important;
+	}
+	.tab-content.ng-hide
+	{
+		display: none !important;
+	}
+
+	.tab-content.ng-hide-add.ng-hide-add-active,
+	.tab-content.ng-hide-remove.ng-hide-remove-active
+	{
+		@include transition(all 0s ease);
+	}
+
+	.tabs
+	{
+		.tab-item
+		{
+			font-weight: bold;
+			text-transform: uppercase;
+			background: $auth-tabs-bg;
+			color: $auth-tabs-color;
+			@include transition(all 0.1s ease);
+		}
+
+		.tab-item.active,
+		.tab-item.activated
+		{
+			margin-top: 0;
+			margin-bottom: -2px;
+			border-width: 0px 0px 4px 0px !important;
+			border-color: $auth-tabs-highlight !important;
+			border-style: solid;
+		}
+	}
+
+	.login-container
+	{
+		margin-bottom: 0px;
+
+		.card-heding
+		{
+			padding: 0px;
+			height: $tabs-height;
+
+			.tabs
+			{
+				top: 0px;
+				padding-top: 0;
+				background-position: bottom;
+				border-top-width: 0;
+				border-bottom-width: 1px;
+			}
+
+			.tab-item
+			{
+				max-width: none;
+			}
+		}
+	}
+}

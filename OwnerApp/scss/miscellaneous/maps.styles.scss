@@ -1,0 +1,32 @@
+.maps-view
+{
+	background-color: $content-bg !important;
+
+	.center-map-action
+	{
+		position: absolute;
+		top: 35px;
+		z-index: 9;
+
+		.item.item-input-inset
+		{
+			padding: 0px 5px;
+		}
+
+		.item-input-wrapper
+		{
+			background: none;
+		}
+	}
+
+	map
+	{
+		width: 100%;
+		height: 100% !important;
+	}
+
+	.scroll, .mapWrap
+	{
+		height: 100%;
+	}
+}

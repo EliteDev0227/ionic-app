@@ -1,0 +1,39 @@
+page-workordernotes {
+  .top_content {
+    text-align: center;
+
+    img {
+      opacity: 0.7;
+    }
+  }
+
+  .bottom_content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+
+    button {
+      margin: 10px;
+    }
+  }
+
+  .mid_content {
+    margin-top: 7px;
+    text-align: center;
+
+    ion-item {
+      border-radius: 1rem;
+      border: 1px solid #ddd;
+    }
+
+    ion-textarea {
+      padding: 0 1rem 0 1rem;
+    }
+  }
+
+  .item-inner {
+    border-bottom: none !important;
+  }
+
+}

@@ -1,0 +1,19 @@
+<ion-view class="slider-view">
+  <ion-nav-title>
+    <span>Slider</span>
+  </ion-nav-title>
+  <ion-content scroll="false">
+    <ion-slide-box show-pager="true">
+      <ion-slide ng-repeat="i in [1,2,3,4,5]">
+        <div class="list card">
+          <div class="item item-image">
+            <img ng-src="http://lorempixel.com/300/200/nature?v={{i}}">
+          </div>
+          <div class="item item-body">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+          </div>
+        </div>
+      </ion-slide>
+    </ion-slide-box>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar color="custom">
+    <ion-title>Upcoming Events</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content no-padding>
+  <ion-list *ngFor="let menu of objectKeys(resData)">
+    <div class="content_tile">{{menu}}</div>
+    <ion-item *ngFor="let subMenu of  resData[menu]" (click)="viewData(subMenu.title, subMenu.desc, subMenu.address, subMenu.phone)">
+      <div class="elencoImg"><img src="https://www.siebert-realty.com/img/uploads/{{subMenu.image}}" alt=""></div>
+      <div class="elencoTxt">
+        <div class="restroName">{{subMenu.title}}</div>
+        <div class="restroNum"><a>{{subMenu.phone}}</a>
+          <div class="restoBtns"><a>CALL</a></div>
+        </div>
+        <div class="restroDes">{{subMenu.start}}</div>
+      </div>
+    </ion-item>
+  </ion-list>
+</ion-content>

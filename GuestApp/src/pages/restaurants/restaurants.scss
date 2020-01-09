@@ -1,0 +1,130 @@
+page-restaurants {
+  .toolbar-title {
+    color: #fff;
+    font-weight: bold;
+  }
+
+  .content {
+    background: white !important;
+  }
+
+  .back-button.show-back-button {
+    background-image: url("../assets/imgs/attract/left.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 15px;
+    max-width: 20px;
+  }
+
+  .content_tile {
+    font-size: 1.7rem;
+    border-bottom: solid 1px #eee;
+    height: 35px;
+    padding-top: 7px;
+    padding-left: 10px;
+    background: rgba(125, 5, 144, 0.8) !important;
+    border: 2px solid #484141;
+    color: #fff;
+    display: flex;
+
+    img {
+      height: 20px;
+      padding-right: 10px;
+    }
+  }
+
+  .back-button-icon {
+    display: none !important;
+  }
+
+  .elencoImg {
+    padding-right: 15px;
+    width: 120px;
+  }
+
+  .elencoImg img {
+    border-radius: 50%;
+    width: 65px !important;
+    height: 65px !important;
+    // border: solid 1px #999999;
+  }
+
+  .restroName {
+    font-size: 1.5rem;
+    color: #111;
+    padding-bottom: 5px;
+    white-space: normal;
+  }
+
+  .restroDes {
+    font-size: 1.3rem;
+    padding-bottom: 5px;
+    color: #999999;
+    white-space: normal;
+
+    p {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  .restroNum {
+    display: flex;
+    align-items: center;
+  }
+
+  .restroNum a {
+    color: #999999;
+    text-decoration: none;
+    font-size: 1.3rem;
+  }
+
+  .restoBtns {
+    margin-top: 10px;
+    text-transform: none;
+
+  }
+
+  .restoBtns a {
+    display: inline-block;
+  }
+
+  .item{
+    border-bottom: 1px solid #ddd !important;
+    background: #fff !important;
+  }
+
+  ion-label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .elencoTxt {
+    width: 65%;
+  }
+  .elecoBtn{
+    width: 10%;
+    padding-left: 5%;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #736f6f;
+  }
+
+  .back-button-text-ios {
+    opacity: 0;
+  }
+  .button-ios-white,
+  .button-md-white {
+    p {
+      color: rgb(101, 101, 137);
+    }
+  }
+
+  .button {
+    box-shadow: none !important;
+    border-radius: 0.7rem !important;
+  }
+}

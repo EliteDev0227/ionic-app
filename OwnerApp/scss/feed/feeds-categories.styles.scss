@@ -1,0 +1,46 @@
+.feeds-categories-view
+{
+	background-color: $content-bg !important;
+
+	.categories-list
+	{
+		@include flex-wrap(wrap);
+	}
+
+	.feed-category
+	{
+		// THIS IS FUCKING AWESOME: http://caniuse.com/#feat=viewport-units
+		@include calc(height, "50vw - 15px");
+		box-shadow: 0 1px 3px rgba(darken($feed-category-bg, 30%), 0.3);
+		border-radius: 2px;
+		position: relative;
+		display: block;
+
+		.category-image
+		{
+			width: 100%;
+			height: 100%;
+			border-radius: 2px;
+		}
+
+		.category-bg
+		{
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(rgba(darken($feed-category-bg, 80%), .85), rgba(darken($feed-category-bg, 10%), .3) 40%, rgba($feed-category-bg, .3) 60%, rgba(lighten($feed-category-bg, 10%), .3));
+		}
+
+		.category-title
+		{
+			color: $feed-category-color;
+			position: absolute;
+			top: 2px;
+			left: 8px;
+			font-weight: 500;
+			text-transform: capitalize;
+		}
+	}
+}

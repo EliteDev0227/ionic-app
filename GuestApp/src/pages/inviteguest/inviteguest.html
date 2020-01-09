@@ -1,0 +1,35 @@
+<ion-content padding>
+    <div class="modal_page">
+      <div class="top_bar">
+        <div class="top_sub">
+          <p>Guest Profile</p>
+        </div>
+        <div class="top_sub_btn">
+          <div class="close_btn" (click)="closeBtn()">
+            <ion-icon ios="ios-close" md="md-close"></ion-icon>
+          </div>
+        </div>
+      </div>
+      <div class="mid_content">
+        <p>Guest Name</p>
+        <h3>{{currentGuestProfile.guest_name}}</h3>
+      </div>
+      <div class="mid_content">
+          <p>Shared Trip</p>
+          <h3>{{currentGuestProfile.guset_trip}}</h3>
+      </div>
+      <div class="mid_content">
+          <p>Mobile Number</p>
+          <h3>{{currentGuestProfile.guest_phone}}</h3>
+      </div>
+      <div class="mid_content">
+          <p>Share Code</p>
+          <h3 style="color: #4eab3a">{{currentGuestProfile.share_code}}</h3>
+      </div>
+      <div class="modal_button">
+        <button ion-button round full color="mainbtn" (click)="deleteBtn()">Delete</button>
+        <button ion-button round full color="danger" (click)="closeBtn()">Close</button>
+      </div>
+    </div>
+  </ion-content>
+

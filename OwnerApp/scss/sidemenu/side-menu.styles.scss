@@ -1,0 +1,91 @@
+ion-side-menu
+{
+	ion-content
+	{
+		background-color: darken($main-menu-bg, 12);
+	}
+
+	ion-item.item
+	{
+		border-right:none;
+		border-left:none;
+		border-color: darken($main-menu-bg, 5);
+
+		.item-content
+		{
+			background-color: darken($main-menu-bg, 12);
+
+			.icon:before
+			{
+				background-color: $main-menu-bg;
+				color: $main-menu-color;
+				border-radius: 50%;
+				font-size: 22px;
+				width: 32px;
+				height: 32px;
+				line-height: 32px;
+			}
+		}
+
+		.item-content.activated
+		{
+			background-color: lighten($main-menu-bg, 10);
+		}
+
+		.menu-text
+		{
+			color: darken($main-menu-color, 20);
+			font-weight:500;
+		}
+	}
+
+	ion-item.item:first-child
+	{
+		border-top:none;
+	}
+
+	ion-item.item:last-child
+	{
+		border-bottom:none;
+	}
+
+	.heading-item
+	{
+
+		.item-content
+		{
+			height: 120px;
+			padding-top: 45px;
+			padding-left: 115px;
+			background-color: darken($main-menu-bg, 10);
+			padding-bottom: 0px;
+		}
+
+		.user-image-container
+		{
+			width:90px;
+			position: absolute;
+		  top: 16px;
+		  left: 12px;
+
+			.user-image
+			{
+				border-radius: 50%;
+				padding: 8px;
+				border: 1px solid darken($main-menu-color, 40);
+				width: 100%;
+			}
+		}
+
+		.greeting
+		{
+			color: $main-menu-color;
+			font-weight:500;
+		}
+
+		.message
+		{
+			color: darken($main-menu-color, 40);
+		}
+	}
+}

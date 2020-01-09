@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar color="custom">
+    <ion-title>My Favourites</ion-title>
+  </ion-navbar>
+
+</ion-header>
+<ion-content no-padding>
+  <ion-list>
+    <div class="content_tile">Wordpress bookmarks</div>
+    <ion-item (click)="showBookMark()">
+        <div class="elencoImg"><img src="assets/imgs/bookmark.png" alt=""></div>
+        <div class="elencoTxt">
+          <div class="restroName">{{bookData.title}}</div>
+            <div class="restroDes">{{bookData.date | amTimeAgo}}</div>
+        </div>
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,38 @@
+<ion-view class="maps-view">
+  <ion-nav-title>
+    <span>Maps</span>
+  </ion-nav-title>
+  <ion-content scroll="false">
+    <div class="mapWrap"  data-tap-disabled="true">
+      <div class="row center-map-action">
+        <div class="col">
+          <div class="list">
+            <div class="item item-input-inset">
+              <a class="button button-icon icon ion-pinpoint" ng-click="centerOnMe()"></a>
+              <label class="item-input-wrapper">
+                <input type="text" placeholder="My Location" disabled ng-model="my_location">
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <map center="{{center_position.lat}},{{center_position.lng}}" zoom="15">
+        <marker
+            position="{{current_position.lat}},{{current_position.lng}}"
+            title="Hello Marker"
+            visible="true">
+        </marker>
+        <info-window id="1" position="{{info_position.lat}},{{info_position.lng}}" visible="true">
+          <div ng-non-bindable="">
+            <b>The best restaurant</b><br>
+            This is html so you can put whatever <br>
+            you want such as images and <a href="">links</a> <br>
+            <img style=" border-radius: 24px;" src="http://lorempixel.com/50/50/food/?v=1"></img>
+            <img style=" border-radius: 24px;" src="http://lorempixel.com/50/50/food/?v=2"></img>
+            <img style=" border-radius: 24px;" src="http://lorempixel.com/50/50/food/?v=3"></img>
+          </div>
+        </info-window>
+      </map>
+    </div>
+  </ion-content>
+</ion-view>

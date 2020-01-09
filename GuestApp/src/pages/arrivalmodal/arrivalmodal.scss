@@ -1,0 +1,56 @@
+page-arrivalmodal {
+  .modal_page {
+    width: 100%;
+    margin-top: 3vh;
+    background: rgba(255, 255, 255, 0.93);
+    border-radius: 5px;
+    padding-top: 1vh;
+    margin-bottom: 12vh;
+  }
+
+  .modal_title {
+    text-align: center;
+    font-size: 1.7rem;
+    padding: 10px;
+    font-weight: bold;
+  }
+
+  .modal_content {
+    padding: 10px;
+    line-height: 2.5rem;
+  }
+
+  .modal_phone {
+    padding: 10px;
+  }
+
+  .modal_button {
+    padding: 20px;
+    button{
+      width: 50%;
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
+  }
+
+  .scroll-content {
+    background: transparent !important;
+  }
+
+  .content-md {
+    background: transparent !important;
+  }
+
+  .content-ios {
+    color: #000;
+    background-color: transparent !important;
+  }
+  .close_btn{
+    text-align: right;
+    padding-right: 2rem;
+    ion-icon{
+      color: #008bc5;
+      font-size: 2rem;
+    }
+  }
+}

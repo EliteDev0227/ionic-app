@@ -1,0 +1,81 @@
+.feed-entries-view
+{
+	background-color: $content-bg !important;
+
+	.entry-heading
+	{
+		padding-top: 8px;
+		padding-bottom: 8px;
+		background-color: darken($entry-heading-color, 10%);
+		border-color: #000;
+
+		.entry-title
+		{
+			color: $entry-title-color;
+		}
+
+		.entry-author
+		{
+			font-weight: 500;
+		}
+	}
+
+	.entry-content
+	{
+		padding-top: 8px;
+		padding-bottom: 0px;
+
+		.entry-excerpt
+		{
+			overflow: hidden;
+			text-overflow: ellipsis;
+			@include display(flex);
+			@include flex-direction(column);
+			-webkit-line-clamp: $entry-excerpt-lines; /* number of lines to show */
+			line-height: $entry-font-size + 4;        /* fallback */
+			font-size: $entry-font-size;        /* fallback */
+			max-height: ($entry-font-size + 4) * $entry-excerpt-lines;       /* fallback */
+
+			*
+			{
+				font-size: inherit !important;
+			}
+		}
+
+		.entry-actions
+		{
+			padding: 10px 0px;
+
+			.col
+			{
+				padding:0px;
+			}
+
+			.actions
+			{
+				.button-icon
+				{
+					min-height: initial;
+					line-height: 28px;
+					padding: 0px;
+					vertical-align: middle;
+					margin-right: 10px;
+				}
+
+				.button-icon:before
+				{
+					font-size: 28px;
+					line-height: 28px;
+				}
+			}
+
+			.read-more
+			{
+				.button
+				{
+					margin:0px;
+				}
+			}
+		}
+	}
+}

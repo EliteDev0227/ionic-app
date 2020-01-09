@@ -1,0 +1,82 @@
+page-submodal {
+  .modal_page {
+    width: 100%;
+    margin-top: 3vh;
+    background: rgba(255, 255, 255, 0.93);
+    border-radius: 5px;
+    padding-top: 1vh;
+    margin-bottom: 12vh;
+  }
+
+  .modal_title {
+    text-align: center;
+    font-size: 1.7rem;
+    padding: 10px;
+    font-weight: bold;
+  }
+
+  .modal_content {
+    padding: 10px;
+    line-height: 2.5rem;
+  }
+
+  .modal_phone {
+    padding: 10px;
+  }
+
+  .modal_button {
+    padding: 20px;
+  }
+
+  .scroll-content {
+    background: transparent !important;
+  }
+
+  .content-md {
+    background: transparent !important;
+  }
+
+  .content-ios {
+    color: #000;
+    background-color: transparent !important;
+  }
+  .close_btn{
+    text-align: right;
+    padding-right: 2rem;
+    ion-icon{
+      color: #008bc5;
+      font-size: 2rem;
+    }
+  }
+  .restroNum {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+  }
+
+  .restroNum a {
+    color: #000;
+    text-decoration: none;
+    font-size: 1.3rem;
+    padding-left: 15px;
+  }
+
+  .restoBtns {
+    position: fixed;
+    right: 4rem;
+  }
+
+  .restoBtns a {
+    display: inline-block;
+  }
+  .restoBtns a:first-child,
+  .restoBtns a:last-child {
+    background: #006681 url(../assets/imgs/resturant/phoneBgIcon.png) no-repeat 2px 2px;
+    background-size: 26px 26px;
+    padding: 7px 18px 7px 38px;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 1.2rem;
+    text-decoration: none
+  }
+}

@@ -1,0 +1,52 @@
+<div class="modal">
+    <ion-header-bar class="bar bar-header bar-dark  ">
+        <h1 class="title">{{unit.Name}} New Reservation</h1>
+        <div class="button button-clear" ng-click="reservationSearchModal.hide()"><span class="icon ion-close light"></span></div>
+    </ion-header-bar>
+    <ion-content has-header="true" padding="true">
+        <div class="row">
+            <div class="col">
+                Use the form below to request owner block for <span class="font_bold">{{unit.UnitName}}</span>!
+
+
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="col">
+                <label for="">Start Date</label>
+                <button class="button button-block button-calm" ng-click="setStartDate()" ng-bind="startDate">CHECKIN</button>
+            </div>
+            <div class="col">
+                <label for="">End Date</label>
+                <button class="button button-block button-calm" ng-click="setEndDate()" ng-bind="endDate">CHECKOUT</button>
+            </div>
+        </div>
+        <ion-checkbox ng-model="owner">Guest Use</ion-checkbox>
+        <div class="row" ng-if="owner">
+
+            <div class="col">
+                <label for="">Guest Name</label>
+                <input class="button button-block button-dark" type="text"  ng-model="guest_name">
+            </div>
+
+        </div>
+        <div class="item item-divider">Add-Ons</div>
+
+        <ion-checkbox ng-model="checkOpt1">Check-in Package</ion-checkbox>
+        <ion-checkbox ng-model="checkOpt2">Linen Needed</ion-checkbox>
+        <ion-checkbox ng-model="checkOpt3">Cleaning Service</ion-checkbox>
+        <hr>
+
+
+        <ion-footer>
+            <div class="row">
+
+                <div class="col"><button ng-click="reservationSearchModal.hide()" class="button button-dark button-block">Close</button></div>
+                <div class="col"><button ng-click="reservationSearchModal.hide()" class=" button button-dark button-outline button-block">
+                    <i class="icon fa fa-search  "></i>&nbsp; Book Now</button></div>
+            </div>
+        </ion-footer>
+    </ion-content>
+
+</div>

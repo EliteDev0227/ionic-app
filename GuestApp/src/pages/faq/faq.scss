@@ -1,0 +1,99 @@
+page-faq {
+  .toolbar-title {
+    color: #fff;
+    font-weight: bold;
+  }
+
+  .content{
+    background: white !important;
+  }
+
+  .back-button.show-back-button {
+    background-image: url("../assets/imgs/menu.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 15px;
+    max-width: 20px;
+  }
+
+  .back-button-icon-md {
+    display: none !important;
+  }
+
+  .list .item.item-accordion {
+    line-height: 2.5rem;
+    padding: 10px;
+    transition: 0.09s all linear;
+    display: block;
+    border-bottom: solid 1px #ddd;
+  }
+
+  .list .item.item-accordion.ng-hide {
+    line-height: 0px;
+  }
+
+  .list .item.item-accordion.ng-hide-add,
+  .list .item.item-accordion.ng-hide-remove {
+    display: block !important;
+  }
+
+  .item {
+    background-color: white !important;
+    color: #615c5c !important;
+    font-weight: normal !important;
+    padding-left: 0px;
+    p{
+      font-size: 1.3rem;
+      line-height: 2rem;
+      padding-bottom: 1rem;
+      padding-top: 1rem;
+    }
+  }
+
+  .signin_signinbtn {
+    margin-top: 5vh;
+    text-align: center;
+    padding: 0 20px;
+
+    button {
+      font-family: "MuseoSans500";
+      font-size: 1.2em;
+      text-transform: none;
+    }
+  }
+
+  .list-md .item-block .item-inner{
+    margin-right: 0px !important;
+    border: none !important;
+  }
+
+
+  .back-button-text-ios {
+    display: none !important;
+  }
+
+  .back-button-icon-ios {
+    opacity: 0;
+  }
+
+  .show_grey {
+    .item-inner {
+      background-color: #eee !important;
+      color: #615c5c !important;
+      font-weight: normal !important;
+    }
+  }
+
+  .item-inner {
+    padding-left: 15px;
+  }
+
+  ion-label {
+    font-size: 1.5rem;
+    white-space: normal;
+  }
+  ion-item:hover { background-color: #ddd !important; }
+
+
+}

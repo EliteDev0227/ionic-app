@@ -1,0 +1,17 @@
+<ion-header no-border>
+  <ion-navbar color="custom">
+    <ion-title>Alerts</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content no-padding>
+    <div class="content_tile">Feeds Bookmarks</div>
+  <ion-list *ngFor="let post of postsData; let idx=index" (click)="getData(idx)">
+    <ion-item>
+      <div class="elencoImg"><img src="./assets/imgs/blog/blog.png" alt=""></div>
+      <div class="elencoTxt">
+        <div class="restroName">{{post.title}}</div>
+        <div class="restroDes">Posted</div>
+      </div>
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,39 @@
+page-workorderimage {
+  .toolbar-title-md {
+    color: #fff;
+    font-weight: bold;
+  }
+  .content {
+    background: #e5e5e5 !important;
+  }
+  .back-button-text-ios {
+    display: none !important;
+  }
+  .top_content{
+    text-align: center;
+    button{
+      height: 40px;
+    }
+  }
+  .mid_content{
+    background: white;
+    border: 2px solid #ddd;
+    border-radius: 1rem;
+    .mid_img{
+      margin: 1rem;
+      border: 1px solid #ddd;
+      background: #eee;
+    }
+    .mid_sub_cont{
+      display: flex;
+      height: 5rem;
+      background: #eee;
+      .sub_cont{
+        flex: 1;
+        text-align: center;
+        margin: auto;
+        font-size: 1.7rem;
+      }
+    }
+  }
+}

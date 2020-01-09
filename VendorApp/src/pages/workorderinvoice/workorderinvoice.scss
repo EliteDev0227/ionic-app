@@ -1,0 +1,33 @@
+page-workorderinvoice {
+  .toolbar-title-md {
+    color: #fff;
+    font-weight: bold;
+  }
+
+  .content {
+    background: #e5e5e5 !important;
+  }
+
+  ion-label{
+    color: #111;
+    font-weight: 400;
+  }
+  .back-button-text-ios {
+    display: none !important;
+  }
+
+  .bottm_content{
+    margin: 5rem 2rem 2rem 2rem;
+    button{
+      margin: 1rem;
+    }
+  }
+  ion-item{
+    background: white !important;
+    border-radius: 1rem !important;
+    margin-top: 5rem !important;
+  }
+  .item.item-block .item-inner{
+    border: none !important;
+  }
+}

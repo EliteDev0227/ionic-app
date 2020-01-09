@@ -1,0 +1,10 @@
+<ion-content padding>
+    <div class="modal_page">
+        <div class="close_btn" (click)="closeBtn()"><ion-icon ios="ios-close" md="md-close"></ion-icon></div>
+        <div class="modal_title">{{modal_content.title}}</div>
+        <div class="modal_content">{{modal_content.message}}</div>
+        <div class="modal_button">
+            <button ion-button round outline color="mainbtn" (click)="confirm()"> Close</button>
+        </div>
+    </div>
+</ion-content>

@@ -1,0 +1,59 @@
+page-signup {
+  ion-content {
+    background-image: url("../assets/imgs/bg-back.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+  }
+
+  .signup_controllers {
+    margin-top: 5rem;
+    display: flex;
+
+    div {
+      flex: 1;
+      padding: 20px;
+      text-align: center;
+    }
+  }
+
+  .confirm_btn {
+    text-transform: none;
+  }
+
+  .scroll-content {
+    overflow-x: unset;
+    overflow-y: hidden;
+  }
+
+  .main_cont {
+    color: #058CC3;
+    margin-top: 1vh;
+    margin-left: 2rem;
+    margin-right: 2rem;
+
+    .userCont {
+      border: 1px solid #ddd;
+      margin-top: 1rem;
+      border-radius: 1rem;
+      padding-left: 1rem;
+      font-weight: bold;
+      font-size: 1.5rem;
+      margin-top: 2rem;
+    }
+  }
+
+  .main_top {
+    .main_image {
+      text-align: center;
+      font-family: "MuseoSans500";
+      font-size: 2.2em;
+      color: #058CC3;
+      margin-top: 2vh;
+    }
+    img{
+      opacity: 0.5;
+    }
+  }
+
+}

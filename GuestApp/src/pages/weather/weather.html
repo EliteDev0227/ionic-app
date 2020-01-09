@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar color="custom">
+    <ion-title>Weather</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content no-padding>
+  <ion-list>
+    <ion-item>
+      <div class="elencoImg"><img src="assets/imgs/weather/{{weekly.icon}}.png" alt=""></div>
+      <div class="elencoTxt">
+        <div class="restroName">Weekly Weather</div>
+        <div class="restroDes">{{weekly.summary}}</div>
+      </div>
+    </ion-item>
+    <ion-item *ngFor="let weather of weekly.data; let i=index" (click)="selectedDay(i)">
+      <div class="elencoImg"><img src="assets/imgs/weather/{{weather.icon}}.png" alt=""></div>
+      <div class="elencoTxt">
+        <div class="restroName">{{getDayName(i)}} {{getDate(weather.time)}}</div>
+        <div class="restroDes">{{weather.summary}}</div>
+        <div class="restroNum">Max: {{weather.temperatureMax.toFixed(1)}}°F</div>
+        <div class="restroNum">Min: {{weather.temperatureMin.toFixed(1)}}°F</div>
+      </div>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

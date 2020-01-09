@@ -1,0 +1,144 @@
+<ion-view class="profile-view">
+
+  <ion-nav-title>
+    <span class="capitalize">{{unit.UnitName}}</span>
+
+  </ion-nav-title>
+  <ion-nav-buttons side="right">
+    <button class="button button-icon button-clear"  ng-click="changeUnit()">
+  <i class=" fa fa-ellipsis-v"></i>
+    </button>
+  </ion-nav-buttons>
+  <ion-content>
+    <ion-refresher pulling-text="Pull to refresh..." on-refresh="doRefresh(id)">
+    </ion-refresher>
+
+    <div class="">
+      <div class="item item-image" >
+        <pre-img ratio="_1_1" helper-class="square-imaged">
+          <img class="category-image" ng-src="{{unit.thumbnail}}" spinner-on-load>
+        </pre-img>
+
+      </div>
+
+    </div>
+    <!--<ion-slide-box show-pager="false" style="width:100%;min-height:270px;">-->
+
+      <!--<ion-slide ng-repeat="img in gallery ">-->
+
+        <!--<div class="">-->
+          <!--<div class="item item-image" >-->
+            <!--<pre-img ratio="_1_1" helper-class="square-imaged">-->
+              <!--<img class="category-image" ng-src="{{img}}" spinner-on-load>-->
+            <!--</pre-img>-->
+
+          <!--</div>-->
+
+        <!--</div>-->
+      <!--</ion-slide>-->
+    <!--</ion-slide-box>-->
+
+
+      <div class="row " style="    background: #1B69B3;">
+        <marquee behavior="scroll" direction="">
+        <h5   class="padding-top light text-right" >
+          <i class="fa fa-question-circle light"></i> {{meta.Income}}
+         Important Announcement! This is the text here
+        </h5>
+        </marquee>
+
+      </div>
+
+
+    <ion-list class="category-feeds">
+
+      <ion-item-accordion title="Reseverations" icon-close="ion-ios-arrow-right" icon-open="ion-ios-arrow-down">
+          <a ng-controller="ReservationsCtrl" class="item item-icon-left positive-bg" ng-click="reservationSearch()">
+              <div>
+              <span class="title light">Request Owner Use</span>
+            </div>
+
+          </a>
+<div class="reservations-list" ng-controller="ReservationsCtrl">
+        <a    ng-repeat="source in reservations " ng-click="reservationDetails(source.confno)" class="item   {{source.Code}}" >
+
+
+
+          <div>
+            <span class="title">{{source.sPrintOnCheckAs_nm}}</span>
+            <p class="description">{{source.Date}}</p>
+            <p class="price">{{source.Rent}} - {{source.Code}}</p>
+          </div>
+        </a>
+</div>
+        <a class="item item-icon-right dark-bg " ui-sref="units.reservations">
+          <div>
+            <span class="title light text-center">View More</span>
+          </div>
+          <i class="icon ion-chevron-right"></i>
+        </a>
+
+       </ion-item-accordion>
+
+      <ion-item ng-class="classItem()" ui-sref="units.workorders" class="item ng-binding item-stable item-accordion-title item-icon-left" style="">
+        <i class="icon ion-ios-arrow-right" ng-class="classGroup()" style=""></i>&nbsp;Work Orders
+      </ion-item>
+
+
+
+      <ion-item-accordion ng-click="loadStatements()"  ui-sref="units.statements" title="Owner Statements" icon-close="ion-ios-arrow-right" icon-open="ion-ios-arrow-down">
+
+        <!--<a dynamic-anchor-fix ng-repeat="x in statements" href="https://api.siebert-realty.com/owner//StmtHist.asp?sid={{x.stmtid}}&owner_id={{x.owner_id}}" class="list-item item">-->
+<!--{{x.title}}-->
+        <!--</a>-->
+      </ion-item-accordion>
+
+      <ion-item ng-class="classItem()" ng-click="loadSurveys()" class="item ng-binding item-stable item-accordion-title item-icon-left" style="">
+        <i class="icon ion-ios-arrow-right" ng-class="classGroup()" style=""></i>&nbsp;Guest Surveys
+      </ion-item>
+
+      <!--<ion-item-accordion title="Rate Management *" icon-close="ion-ios-arrow-right" icon-open="ion-ios-arrow-down">-->
+        <!--<div class="row">-->
+          <!--<h2 class="text-center">This section will be available soon</h2>-->
+        <!--</div>-->
+      <!--</ion-item-accordion>-->
+
+ <!--<ion-item-accordion title="Manage My Home" icon-close="ion-ios-arrow-right" icon-open="ion-ios-arrow-down">-->
+   <!--<a class="item  item-icon-right" >-->
+
+     <!--<div>-->
+       <!--<span class="title">Description</span>-->
+
+     <!--</div>-->
+     <!--<i class="icon ion-chevron-right"></i>-->
+   <!--</a>-->
+   <!--<a class="item item-icon-left item-icon-right" ui-sref="units.reservations">-->
+     <!--<i class="icon ion-calendar"></i>-->
+     <!--<div>-->
+       <!--<span class="title">Amenities</span>-->
+     <!--</div>-->
+     <!--<i class="icon ion-chevron-right"></i>-->
+   <!--</a>  <a class="item item-icon-left item-icon-right" ui-sref="units.reservations">-->
+     <!--<i class="icon ion-calendar"></i>-->
+     <!--<div>-->
+       <!--<span class="title">WIKI</span>-->
+     <!--</div>-->
+     <!--<i class="icon ion-chevron-right"></i>-->
+   <!--</a>-->
+      <!--</ion-item-accordion>-->
+
+    </ion-list>
+
+    <div class="entries-list">
+
+
+
+
+    <div class="bottom-content">
+      <div class="user-bio">
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+      </div>
+    </div>
+    </div>
+  </ion-content>
+</ion-view>

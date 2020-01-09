@@ -1,0 +1,35 @@
+<ion-view class="bookmarks-view">
+  <ion-nav-title>
+    <span>Bookmarks</span>
+  </ion-nav-title>
+  <ion-content>
+    <div ng-if="(bookmarks.wordpress.length == 0 && bookmarks.feeds.length == 0)" class="row bookmarks-container">
+      <div class="col col-center">
+        <div class="empty-results">
+          <i class="icon ion-bookmark"></i>
+          <h3 class="no-bookmarks">There's nothing here yet. Start exploring!</h3>
+        </div>
+      </div>
+    </div>
+    <ul ng-if="(bookmarks.wordpress.length > 0 || bookmarks.feeds.length > 0)" class="bookmarks-list">
+      <div ng-if="bookmarks.feeds.length > 0" class="item item-divider">
+        Feeds Bookmarks
+      </div>
+      <li class="bookmark-item" ng-repeat="bookmark in bookmarks.feeds">
+        <a ng-click=goToFeedPost(bookmark.link)>
+          <h2 class="post-title" ng-bind-html="bookmark.title | rawHtml"></h2>
+          <p class="post-date">Posted <span class="post-time" am-time-ago="bookmark.date"></span></p>
+        </a>
+      </li>
+      <div ng-if="bookmarks.wordpress.length > 0" class="item item-divider">
+        Wordpress bookmarks
+      </div>
+      <li class="bookmark-item" ng-repeat="bookmark in bookmarks.wordpress">
+        <a ng-click=goToWordpressPost(bookmark.id)>
+          <h2 class="post-title" ng-bind-html="bookmark.title | rawHtml"></h2>
+          <p class="post-date">Posted <span class="post-time" am-time-ago="bookmark.date"></span></p>
+        </a>
+      </li>
+    </ul>
+  </ion-content>
+</ion-view>

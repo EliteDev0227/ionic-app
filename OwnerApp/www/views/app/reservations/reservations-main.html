@@ -1,0 +1,21 @@
+<ion-view class="feeds-categories-view">
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  <ion-nav-title>
+    <span>Select a property</span>
+  </ion-nav-title>
+  <ion-content>
+    <div class="row categories-list">
+      <div ng-repeat="unit in units" class="col col-50">
+        <a class="feed-category" ui-sref="reservations.reservation({UnitID: '{{unit.UnitID}}',UnitName:(unit.UnitName | slugify),id:{{unit.id}}})">
+          <pre-img ratio="_1_1" helper-class="square-image">
+            <img class="category-image" ng-src="{{unit.thumbnail}}" spinner-on-load>
+          </pre-img>
+          <div class="category-bg"></div>
+          <span class="category-title">{{unit.UnitName}}</span>
+        </a>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

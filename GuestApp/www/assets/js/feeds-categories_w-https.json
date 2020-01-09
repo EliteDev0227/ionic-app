@@ -1,0 +1,114 @@
+[
+	{
+		"id":"news",
+		"title":"News",
+		"image":"img/feeds/news.jpg",
+		"feed_sources":[
+			{
+				"id":"bbc",
+				"title":"BBC",
+				"description":"The latest stories from the World section of the BBC News web site.",
+				"image":"img/feeds/logos/bbc.jpg",
+				"url":"https://feeds.bbci.co.uk/news/world/rss.xml"
+			}
+		]
+	},
+	{
+		"id":"sports",
+		"title":"Sports",
+		"image":"img/feeds/sports.jpg",
+		"feed_sources":[
+			{
+				"id":"bbc",
+				"title":"BBC",
+				"description":"The latest stories from the Sport section of the BBC Sport web site.",
+				"image":"img/feeds/logos/bbc.jpg",
+				"url":"https://feeds.bbci.co.uk/sport/0/rss.xml"
+			},
+			{
+				"id":"fox-sports",
+				"title":"FOX Sports",
+				"description":"FOX Sports Generic Content Feed",
+				"image":"img/feeds/logos/fox-sports.jpg",
+				"url":"https://api.foxsports.com/v1/rss?partnerKey=zBaFxRyGKCfxBagJG9b8pqLyndmvo7UU"
+			}
+		]
+	},
+	{
+		"id":"business",
+		"title":"Business",
+		"image":"img/feeds/business.jpg",
+		"feed_sources":[
+			{
+				"id":"the-economist",
+				"title":"The Economist",
+				"description":"The Economist business and finance",
+				"image":"img/feeds/logos/the-economist.jpg",
+				"url":"https://www.economist.com/sections/business-finance/rss.xml"
+			},
+			{
+				"id":"inc",
+				"title":"Inc.",
+				"description":"Advice for founders of start-ups and start-up entrepreneurs on writing a business plan, running a home-based business, naming a start-up business, how to incorporate, financing a start-up, buying a small business, and starting a franchise.",
+				"image":"img/feeds/logos/inc.jpg",
+				"url":"https://feeds.feedburner.com/inc/channel/start-up"
+			}
+		]
+	},
+	{
+		"id":"entertainment",
+		"title":"Entertainment",
+		"image":"img/feeds/entertainment.jpg",
+		"feed_sources":[
+			{
+				"id":"the-hollywood-reporter",
+				"title":"The Hollywood Reporter",
+				"description":"The Hollywood Reporter news",
+				"image":"img/feeds/logos/the-hollywood-reporter.jpg",
+				"url":"https://feeds.feedburner.com/thr/news"
+			},
+			{
+				"id":"tmz",
+				"title":"TMZ",
+				"description":"Celebrity Gossip and Entertainment News, Covering Celebrity News and Hollywood Rumors. Get All The Latest Gossip at TMZ - Thirty Mile Zone.",
+				"image":"img/feeds/logos/tmz.jpg",
+				"url":"https://www.tmz.com/rss.xml"
+			}
+		]
+	},
+	{
+		"id":"politics",
+		"title":"Politics",
+		"image":"img/feeds/politics.jpg",
+		"feed_sources":[
+			{
+				"id":"bbc",
+				"title":"BBC",
+				"description":"The latest stories from the World section of the BBC News web site.",
+				"image":"img/feeds/logos/bbc.jpg",
+				"url":"https://feeds.bbci.co.uk/news/world/rss.xml"
+			}
+		]
+	},
+	{
+		"id":"technology",
+		"title":"Technology",
+		"image":"img/feeds/technology.jpg",
+		"feed_sources":[
+			{
+				"id":"techcrunch",
+				"title":"TechCrunch",
+				"description":"Startup and Technology News",
+				"image":"img/feeds/logos/techcrunch.jpg",
+				"url":"https://feeds.feedburner.com/TechCrunch/social"
+			},
+			{
+				"id":"techradar",
+				"title":"Techradar",
+				"description":"Get all the latest tech news from Techradar.com",
+				"image":"img/feeds/logos/techradar.jpg",
+				"url":"https://feeds2.feedburner.com/techradar/allnews"
+			}
+		]
+	}
+]

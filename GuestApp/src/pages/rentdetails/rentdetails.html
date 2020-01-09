@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-navbar color="custom">
+    <ion-title>RentDetails</ion-title>
+  </ion-navbar>
+
+</ion-header>
+<ion-content no-padding>
+  <div class="top_img">
+    <img src="https://www.siebert-realty.com/units/pics/{{resUnitId}}.jpg" alt="">
+  </div>
+  <div class="row cta">
+    <div class="col" style="text-align:center" (click)="viewBook()" ><a class="cat-icon"> <i class="fa fa-shopping-bag" aria-hidden="true"></i></a><br><span
+        class="cta-label">BOOK IT</span></div>
+    <div class="col" style="text-align:center"><a class="cat-icon"  href="tel:757 426 6200">
+        <ion-icon ios="ios-call" md="md-call"></ion-icon>
+      </a><br><span class="cta-label">CALL</span></div>
+    <div class="col" style="text-align:center" (click)="sendEmail()" ><a class="cat-icon">
+        <ion-icon ios="ios-mail" md="md-mail"></ion-icon>
+      </a><br><span class="cta-label">EMAIL</span></div>
+  </div>
+  <ion-list>
+    <ion-item (click)="viewDes()">
+      <div class="restroName">
+        <i class="fa fa-file-text" aria-hidden="true"></i> &nbsp;&nbsp; View Description
+      </div>
+    </ion-item>
+    <ion-item (click)="viewGallery()">
+      <div class="restroName">
+        <i class="fa fa-camera" aria-hidden="true"></i> &nbsp;&nbsp;View Gallery
+      </div>
+    </ion-item>
+    <ion-item (click)="viewMap()">
+      <div class="restroName">
+        <i class="fa fa-map-o" aria-hidden="true"></i>&nbsp;&nbsp;View Map
+      </div>
+    </ion-item>
+    <ion-item (click)="viewAmenty()">
+      <div class="restroName">
+        <i class="fa fa-star" aria-hidden="true"></i>&nbsp;&nbsp;Amentities
+      </div>
+    </ion-item>
+    <ion-item (click)="viewAvaliablity()">
+      <div class="restroName">
+        <i class="fa fa-calendar-o" aria-hidden="true"></i>&nbsp;&nbsp; Availability
+      </div>
+    </ion-item>
+    <ion-item (click)="viewWebsite()">
+      <div class="restroName">
+        <i class="fa fa-link" aria-hidden="true"></i>&nbsp;&nbsp; View Website
+      </div>
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,108 @@
+page-signin {
+
+  ion-content {
+    background-image: url("../assets/imgs/bg-back.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+  }
+
+  .signin_container {
+    position: absolute;
+    width: 95%;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    // background: rgba(0, 0, 0, 0.06);
+    padding: 10px;
+  }
+
+  .signin_title {
+    text-align: center;
+    font-family: "MuseoSans500";
+    font-size: 2.2em;
+    color: #058CC3;
+    margin-top: 10vh;
+  }
+
+  // .signin_name,
+  // .signin_pwd {
+  //   background-color: transparent !important;
+  // }
+
+  .signin_signinbtn {
+    margin-top: 5vh;
+    text-align: center;
+    padding: 0 20px;
+
+    button {
+      font-family: "MuseoSans500";
+      margin-top: 1rem;
+      font-size: 1.2em;
+      text-transform: none;
+      ion-icon{
+        margin: auto 1rem auto 0rem;
+        font-size: 3rem;
+      }
+    }
+  }
+
+  .signin_signupbtn {
+    margin-top: 3vh;
+    text-align: center;
+
+    span {
+      text-decoration: underline;
+      font-family: "MuseoSans500";
+      font-size: 1.2em;
+      color: #34c4ff;
+      text-transform: none;
+    }
+  }
+
+  .scroll-content {
+    overflow-x: unset;
+    overflow-y: hidden;
+  }
+
+  .item-md {
+    background: white !important;
+  }
+
+  .item-ios {
+    background: white !important;
+  }
+
+  .select-md .select-icon {
+    position: relative;
+    width: 12px;
+    height: 19px;
+    margin: 10px !important;
+  }
+
+  ion-label#langaugeSetting {
+    font-size: 1.2rem;
+  }
+
+  ion-select#langSelect {
+    font-size: 1.2rem;
+  }
+
+  .main_cont {
+    color: #058CC3;
+
+    ion-input {
+      border: 1px solid #ddd;
+      border-radius: 1rem;
+      margin-top: 1rem;
+      padding-left: 1rem;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+  }
+  ion-segment-button{
+    padding-top: 10px;
+    height: 4rem !important;
+  }
+
+}

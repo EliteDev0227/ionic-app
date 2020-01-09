@@ -1,0 +1,63 @@
+page-promotions {
+  .toolbar-title-md {
+    color: #fff;
+    font-weight: bold;
+  }
+
+  .content {
+    background: #eee !important;
+  }
+
+  .back-button.show-back-button {
+    background-image: url("../assets/imgs/menu.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 15px;
+    max-width: 20px;
+  }
+
+  .back-button-icon-md {
+    display: none !important;
+  }
+
+  .item {
+    padding-left: 0px;
+    border-bottom: none !important;
+    background: #fff !important;
+  }
+
+  ion-label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .item-md.item-block .item-inner {
+    border-bottom: none !important;
+    height: auto !important;
+  }
+
+  .list-md>.item-block:last-child .item-inner {
+    height: auto !important;
+  }
+
+  .setting_btn {
+    border-top: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .dealBtn {
+    width: 80%;
+  }
+
+  .back-button-text-ios {
+    display: none !important;
+  }
+
+  .back-button-icon-ios {
+    opacity: 0;
+  }
+}

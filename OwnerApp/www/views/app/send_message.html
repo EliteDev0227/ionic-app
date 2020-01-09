@@ -1,0 +1,57 @@
+<div class="modal">
+    <ion-header-bar class="bar bar-header bar-dark  ">
+        <h1 class="title">Send a Message</h1>
+        <div class="button button-clear" ng-click="reservationSearchModal.hide()"><span class="icon ion-close light"></span></div>
+    </ion-header-bar>
+    <ion-content has-header="true" padding="true">
+        <div class="row">
+            <div class="col">
+                Use this tool to send Siebert Staff a message
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h4> {{staff_member.name}}</h4>
+                <h4> {{staff_member.email}}</h4>
+                <h4> 757-426-6200 x{{staff_member.extension}}</h4>
+
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="col">
+                <label for="">Subject</label>
+                <input type="text" class="button button-block button-calm"  ng-bind="contact.subject">
+            </div>
+
+        </div>
+        <div class="row">
+
+            <div class="col">
+                <label for="">Message</label>
+                <textarea style="width: 100%" class="button button-block button-calm"  ng-bind="contact.message">CHECKIN</textarea>
+            </div>
+
+        </div>
+        <ion-checkbox ng-model="contact.call_back">Call Me</ion-checkbox>
+        <div class="row" ng-if="contact.call_back">
+
+            <div class="col">
+                <label for="">Best Contact Number</label>
+                <input class="button button-block button-dark" type="text"  ng-model="contact.best_number">
+            </div>
+
+        </div>
+
+        <ion-footer>
+            <div class="row">
+
+                <div class="col"><button ng-click="reservationSearchModal.hide()" class="button button-dark button-block">Close</button></div>
+                <div class="col"><button ng-click="reservationSearchModal.hide()" class=" button button-dark button-outline button-block">
+                    <i class="icon fa fa-envelope  "></i>&nbsp; Send Message</button></div>
+            </div>
+        </ion-footer>
+    </ion-content>
+
+</div>

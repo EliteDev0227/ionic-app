@@ -1,0 +1,44 @@
+<ion-content padding>
+  <div class="modal_page">
+    <div class="top_bar">
+      <div class="top_sub">
+        <p>Invite Your Guests</p>
+      </div>
+      <div class="top_sub_btn">
+        <div class="close_btn" (click)="closeBtn()">
+          <ion-icon ios="ios-close" md="md-close"></ion-icon>
+        </div>
+      </div>
+    </div>
+    <div class="top_content">
+      <p>Guest Name</p>
+      <div class="top_user">
+          <ion-input type="text" [(ngModel)]="guestName" placeholder="John Doe"></ion-input>
+      </div>
+    </div>
+    <div class="top_content">
+        <p>Enter Mobile Number</p>
+    </div>
+    <div class="mainCont">
+      <div class="subCont1" (click)="openPhoneNumber()">
+        <img src="{{imageUrl}}" class="flag-icon">
+        <p>{{currentDialCode}}</p>
+      </div>
+      <div class="subCont2">
+        <ion-input type="tel" [(ngModel)]="phoneNumber" placeholder="Phone Number"></ion-input>
+      </div>
+    </div>
+    <div class="mid_content">
+      <p>Select Trip</p>
+      <ion-item>
+          <ion-label>House Name</ion-label>
+          <ion-select [(ngModel)]="houseName" name="houseName">
+            <ion-option *ngFor="let trip of leaseData.trips; let i = index" [value]="trip.unit_name">{{trip.unit_name}}</ion-option>
+          </ion-select>
+        </ion-item>
+    </div>
+    <div class="modal_button">
+      <button ion-button round full color="mainbtn" (click)="confirm()"> share</button>
+    </div>
+  </div>
+</ion-content>

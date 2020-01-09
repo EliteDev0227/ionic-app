@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar color="custom">
+    <ion-title>Maps</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <div class="map-action">
+    <div class="location_view">
+      <a (click)="centerOnMe()">
+          <ion-icon name="locate"></ion-icon>
+      </a>
+      <label class="location_label">
+        <input type="text" placeholder="My Location" [(ngModel)]="my_location">
+      </label>
+    </div>
+  </div>
+
+  <div id="map" style="height: 100%;width:100%;"></div>
+</ion-content>

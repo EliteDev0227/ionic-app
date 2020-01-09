@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-navbar color="custom">
+    <ion-title>My Past Reservations</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content no-padding>
+  <ion-list>
+    <ion-item *ngFor="let res of resData">
+      <div class="elencoImg"><img src="{{res.unit_thumbnail}}" alt=""></div>
+      <div class="elencoTxt">
+        <div class="restroName">{{res.unit_name}}</div>
+        <div class="restroDes">{{res.arrival_date}} -  {{res.departure_date}}</div>
+      </div>
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,38 @@
+.walkthrough-view
+{
+	.top-content
+	{
+		height: 75%;
+		text-align: center;
+
+		h1
+		{
+			color: $auth-color;
+		}
+	}
+
+	.bottom-content
+	{
+		height: 25%;
+		padding-top: 5px;
+		margin-top: 0px;
+
+		.button
+		{
+			border: none;
+			color: $auth-color;
+			font-weight: bolder;
+			font-size: 20px;
+		}
+
+		.login.button
+		{
+			background-color: $auth-login-btn-bg;
+		}
+
+		.sign-up.button
+		{
+			background-color: $auth-signup-btn-bg;
+		}
+	}
+}

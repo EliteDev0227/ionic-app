@@ -1,0 +1,25 @@
+<ion-view class="layouts-view">
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  <ion-nav-title>
+    <span>Owner Statements</span>
+  </ion-nav-title>
+  <ion-content>
+    <ion-refresher pulling-text="Pull to refresh..." on-refresh="loadStatements()">
+    </ion-refresher>
+    <div class="row">
+      <div class="col">
+        <p>What information would you like to see here?</p>
+      </div>
+    </div>    <div class="list layouts-functionalities">
+      <a class="button-block button-dark button" href="http://70.165.72.74/forms/2019_Owner%20Schedule.pdf">  View Owner Statement Schedule</a>
+
+      <a dynamic-anchor-fix ng-repeat="x in statements" href="https://api.siebert-realty.com/owner//StmtHist.asp?sid={{x.stmtid}}&owner_id={{x.owner_id}}" class="list-item item">
+      {{x.title}}
+      </a>
+
+
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar color="custom">
+    <ion-title>Local Attractions</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content no-padding class="card-background-page">
+  <ion-card *ngFor="let res of resData; let idx=index" (click)="viewCatData(idx)">
+    <img src="{{res.thumbnail}}" />
+    <div class="category-bg"></div>
+    <div class="card-title" [style.background]="getBackground(idx)">
+      <p>{{res.name}}<p>
+    </div>
+    <div class="card-subtitle" >VIEW
+      <ion-icon ios="ios-arrow-round-forward" md="md-arrow-round-forward"></ion-icon>
+    </div>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,82 @@
+page-explorehome {
+  .toolbar-title-md {
+    color: #fff;
+    font-weight: bold;
+  }
+
+  .content {
+    background: white !important;
+
+  }
+
+  .back-button.show-back-button {
+    background-image: url("../assets/imgs/menu.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 15px;
+    max-width: 20px;
+  }
+
+  .back-button-icon-md {
+    display: none !important;
+  }
+
+  .list .item.item-accordion {
+    line-height: 38px;
+    padding-top: 0;
+    padding-bottom: 0;
+    transition: 0.09s all linear;
+  }
+
+  .list .item.item-accordion.ng-hide {
+    line-height: 0px;
+  }
+
+  .list .item.item-accordion.ng-hide-add,
+  .list .item.item-accordion.ng-hide-remove {
+    display: block !important;
+  }
+
+  .content_tile {
+    font-size: 1.2rem;
+    border-bottom: solid 1px #eee;
+    height: 40px;
+    padding-top: 13px;
+    padding-left: 10px;
+  }
+
+  .item {
+    background-color: white !important;
+    color: #615c5c !important;
+    font-weight: normal !important;
+  }
+
+  .list-md .item-block .item-inner {
+    height: 45px !important;
+    border: none !important;
+  }
+
+  .item-inner {
+    height: 45px !important;
+  }
+
+  .signin_signinbtn {
+    margin-top: 5vh;
+    text-align: center;
+    padding: 0 20px;
+
+    button {
+      font-family: "MuseoSans500";
+      font-size: 1.2em;
+      text-transform: none;
+    }
+  }
+  .back-button-text-ios {
+    display: none !important;
+  }
+
+  .back-button-icon-ios {
+    opacity: 0;
+  }
+}

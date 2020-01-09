@@ -1,0 +1,9 @@
+$main-menu-bg: $theme-color-3;
+$main-menu-color: #FFFFFF;
+
+// Menu - User image
+$menu-user-img-width: 10vw;
+$menu-user-img-ratio: 1 1;
+
+// Merge maps
+$pre-img-ratios: append($pre-img-ratios, $menu-user-img-ratio);

@@ -1,0 +1,15 @@
+<ion-header no-border>
+  <ion-navbar color="custom">
+    <ion-title>Invoice Details</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-item>
+    <ion-label>HTML5</ion-label>
+    <ion-toggle [(ngModel)]="htmlData"></ion-toggle>
+  </ion-item>
+  <div class="bottm_content">
+      <button ion-button round full color="mainbtn" (click)="addInvoice()"> Add Invoice </button>
+      <button ion-button round full color="promobtn" (click)="close()"> Close </button>
+  </div>
+</ion-content>

@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar color="custom">
+    <ion-title>Payment Options</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content no-padding>
+  <div class="content_tile">Siebert Realty has several payment methods available to accommodate your budgeting needs.</div>
+  <ion-list *ngFor="let payment of paymentData" (click)="getPayment(payment.link)">
+    <ion-item>
+      <div class="elencoImg"><img src="{{payment.icon}}" alt=""></div>
+      <div class="elencoTxt">
+        <div class="restroName">{{payment.title}}</div>
+        <div class="restroDes">{{payment.desc}}</div>
+      </div>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

@@ -1,0 +1,28 @@
+<ion-view class="image-picker-view">
+  <ion-nav-title>
+    <span>Image picker</span>
+  </ion-nav-title>
+  <ion-content class="padding">
+    <button class="button button-block button-dark" ng-click="openImagePicker()">
+      Select Images
+    </button>
+    <button  ng-show="images.length > 0" class="button button-block button-stable" ng-click="shareAll()">
+      Share All
+    </button>
+    <div class="list card" ng-repeat="img in images">
+      <div class="item item-image">
+        <img ng-src="{{img}}">
+      </div>
+      <div class="item tabs tabs-secondary tabs-icon-left">
+        <div class="tab-item image-option" ng-click="shareImage(img)">
+          <i class="icon ion-share"></i>
+          Share
+        </div>
+        <div class="tab-item assertive image-option" ng-click="removeImage(img)">
+          <i class="icon ion-trash-a assertive"></i>
+          Remove
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

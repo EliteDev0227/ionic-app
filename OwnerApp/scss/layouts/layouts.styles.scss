@@ -1,0 +1,20 @@
+.layouts-view
+{
+  .layouts-functionalities
+  {
+    .item .icon:first-child
+    {
+      color: $layouts-icon-color;
+    }
+
+    .item .title
+    {
+      font-weight:500;
+    }
+
+    .item .description
+    {
+      color: lighten($content-color, 30%);
+    }
+  }
+}

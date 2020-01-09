@@ -1,0 +1,62 @@
+<div class="modal">
+    <ion-header-bar class="bar bar-header bar-dark  ">
+        <h1 class="title">{{unit.UnitName}} Guest Surveys</h1>
+        <div class="button button-clear" ng-click="surveysModal.hide()"><span class="icon ion-close light"></span></div>
+
+    </ion-header-bar>
+    <ion-content has-header="true" padding="true">
+        <div class="row">
+            <div class="col">
+                <p>Each week departing guests are sent a departure email with a link to our Online Guest Survey Form . We ask the guest to please complete the survey and submit it to Siebert Realty so we may better serve them in the future. Not all guests complete the forms but we generally have a good response (approximately 45%).</p>
+
+                 </p>
+            </div>
+        </div>
+        <div class=" surveys" >
+            <div class="list card"  >
+
+                <div class="item item-header">
+                    {{survey_details.total}} Total Reviews
+                </div>
+                <div ng-if="review.Comment" class="item item-body">
+
+                </div>
+                <div class="item item-footer">
+                    <p><img ng-src="https://www.siebert-realty.com{{survey_details.image}}"   alt="">
+                        <span class="text-right pull-right"> {{review.Guest}} ({{review.Location}})</span>
+                    </p>
+                </div>
+            </div> <div class="list card" ng-repeat="review in surveys track by $index" >
+
+                <div class="item item-header">
+
+                    {{review.Guest}} ({{review.Location}})
+
+                </div>
+                <div ng-if="review.Comments" class="item item-body">
+                    <p >{{review.Comments}}</p>
+                    <p ng-if="!review.Comments">No comment</p>
+                </div>
+                <div class="item item-footer">
+                    <span class="strong"> View Card</span>
+                    <p><span  class="text-right pull-left ">
+                        {{review.Arrive}}</span>
+                    </p>
+                </div>
+            </div>
+
+
+
+        </div>
+
+        <ion-footer>
+            <div class="row">
+
+                <button ng-click="surveysModal.hide()" class="button button-dark button-block">Close</button>
+
+
+            </div>
+        </ion-footer>
+    </ion-content>
+
+</div>

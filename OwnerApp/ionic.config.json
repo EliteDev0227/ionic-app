@@ -1,0 +1,17 @@
+{
+  "name": "ionFullApp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic1",
+  "gulpStartupTasks": [
+    "sass",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*",
+    "scss/**/*"
+  ],
+  "documentRoot": "www"
+}

@@ -1,0 +1,34 @@
+<ion-view class="tinder-cards-view">
+  <ion-nav-title>
+    <span>Tinder Cards</span>
+  </ion-nav-title>
+  <ion-content scroll="false">
+    <td-cards>
+      <td-card id="td-card" ng-repeat="card in cards"
+      on-transition-left="transitionLeft(card)"
+      on-transition-right="transitionRight(card)"
+      on-transition-out="transitionOut(card)"
+      on-destroy="cardDestroyed($index)"
+      on-swipe-left="cardSwipedLeft($index)"
+      on-swipe-right="cardSwipedRight($index)"
+      on-partial-swipe="cardPartialSwipe(amt)">
+        <div class="image">
+          <div class="no-text overlayBox">
+            <div class="noBox boxed">
+              Nope
+            </div>
+          </div>
+          <img ng-src="{{card.image}}">
+          <div class="yes-text overlayBox">
+            <div class="yesBox boxed">
+              Yes
+            </div>
+          </div>
+        </div>
+        <div class="title">
+          {{card.name}}
+        </div>
+      </td-card>
+    </td-cards>
+  </ion-content>
+</ion-view>

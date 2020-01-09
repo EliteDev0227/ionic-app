@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar color="custom">
+    <ion-title style="text-align:center">Job Details</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <div class="top_content">
+    <img src="assets/imgs/siebert.png" />
+  </div>
+  <div class="mid_content">
+    <ion-item>
+      <!-- <ion-label floating>Details about the maintenance issue you are reporting</ion-label> -->
+      <ion-textarea #myInput id="myInput" rows="12" maxLength="500" (keyup)="resize()" [(ngModel)]="workOrderData.woWorkDone" placeholder="Details about the services performed."></ion-textarea>
+    </ion-item>
+  </div>
+  <div class="bottom_content">
+    <button ion-button round full color="danger" (click)="close()"> Close</button>
+    <button ion-button round full color="mainbtn" (click)="confirm()"> Save Details</button>
+  </div>
+
+</ion-content>

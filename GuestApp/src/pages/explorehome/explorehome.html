@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar color="custom">
+
+    <ion-title>House Wiki</ion-title>
+  </ion-navbar>
+
+</ion-header>
+<ion-content no-padding>
+  <ion-list>
+    <div class="content_tile">This is your complete guide to everything in your home</div>
+    <div *ngFor="let group of groups" style="border-bottom: 1px solid #ddd">
+      <ion-item class="item-stable" (click)=toggleGroup(group)>
+        <ng-container *ngIf="!group.show"> {{item}}</ng-container>
+        <ion-icon ios="ios-add" md="md-add" *ngIf="group.show==false"> </ion-icon>
+        <ion-icon ios="ios-remove" md="md-remove" *ngIf="group.show==true"></ion-icon>
+        Section {{group.name}}
+      </ion-item>
+      <ng-container *ngIf="group.show">
+        <ion-item class="item-accordion" *ngFor="let item of group.items">{{item}}</ion-item>
+      </ng-container>
+    </div>
+  </ion-list>
+  <div class="contact_title">
+    <p style="text-align: center">Have a question not listed? Ask us now!</p>
+  </div>
+  <div class="signin_signinbtn">
+    <button ion-button round full color="mainbtn" (click)="contact()">
+      Contact Us
+    </button>
+  </div>
+
+</ion-content>

@@ -1,0 +1,22 @@
+<ion-header no-border>
+    <ion-navbar color="custom">
+      <ion-title color="white">Guest Sign Up</ion-title>
+    </ion-navbar>
+  </ion-header>
+  <ion-content padding>
+    <div class="signup_avatar">
+      <img src="{{userInfo.photoURL}}" (click)="getAvatarOption()" />
+    </div>
+    <div class="main_cont">
+      <ion-input type="email" [(ngModel)]="userInfo.email" placeholder="Email"></ion-input>
+      <ion-input type="password" [(ngModel)]="userInfo.pwd" placeholder="Password"></ion-input>
+    </div>
+    <div class="signup_controllers">
+      <div>
+        <button ion-button round full color="mainbtn" (click)="registerGuest()" class="confirm_btn">Register</button>
+      </div>
+      <div>
+        <button ion-button round full (click)="closeSignupModal()" class="confirm_btn">Cancel</button>
+      </div>
+    </div>
+  </ion-content>

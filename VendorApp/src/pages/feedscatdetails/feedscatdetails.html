@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-navbar color="custom">
+    <ion-title>News Feeds</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content no-padding>
+  <ion-list>
+    <ion-item *ngFor="let res of resData; let idx=index" (click)="viewDetails(idx)">
+      <div class="elencoImg"><img src={{res.image}} alt=""></div>
+      <div class="elencoTxt">
+        <div class="restroName">{{res.title}}</div>
+        <div class="restroDes">{{res.description}}</div>
+      </div>
+    </ion-item>
+  </ion-list>
+</ion-content>

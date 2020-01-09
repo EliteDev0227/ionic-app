@@ -1,0 +1,61 @@
+<ion-view class="document-archive">
+  <ion-nav-title>
+    <span>Documents & Forms</span>
+
+  </ion-nav-title>
+
+  <ion-content>
+    <ion-refresher pulling-text="Pull to refresh..." on-refresh="doRefresh()">
+    </ion-refresher>
+
+    <div class="bottom-content row">
+      <div class="user-bio col text-center">
+        <p>This section contains general forms provided by Siebert. For reports specific to your home, you will need to navigate to your units' dashboard.</p>
+      </div>
+    </div>
+    <ion-slide-box slide-tabs-scrollable="false"  show-pager="false" ion-slide-tabs>
+      <ion-slide ion-slide-tab-label="Information">
+
+        <div class="list">
+          <a ng-repeat="x in forms track by $index" class="item item-icon-left" href="{{x.link}}">
+            <i class="icon ion-document"></i>
+            <h2>{{x.title}}</h2>
+
+          </a>
+
+
+        </div>
+      </ion-slide>
+      <ion-slide ion-slide-tab-label="Newsletters">
+          <div class="list">
+            <a ng-repeat="x in Newsletters track by $index" class="item item-icon-left" href="{{x.link}}">
+              <i class="icon fa fa-download"></i>
+              <h2>{{x.title}}</h2>
+              <p>Living valley had silent eat merits esteem bed. In last an or went wise as left. Visited civilly am demesne so colonel he calling. So unreserved do interested increasing sentiments. Vanity day giving points within six not law. Few impression difficulty his use has comparison decisively.
+              </p>
+            </a>
+          </div>
+      </ion-slide>
+    </ion-slide-box>
+
+
+    <div class="entries-list">
+  <!--<pre>{{reservations}}-->
+          <!--</pre>-->
+    <div class="list category-feeds">
+      <a ng-repeat="source in reservations" class="item item-thumbnail-left item-icon-right" ui-sref="app.feed-entries({categoryId: categoryId, sourceId: (source.title | slugify)})">
+
+            <img class="thumbnail" ng-src="http://www.clker.com/cliparts/o/V/i/a/v/M/home-icon-th.png" >
+
+        <div>
+          <span class="title">{{source.Guest}}</span>
+          <p class="description">{{source.Date}}</p>
+          <p class="description">{{source.ReservationTotal}} - {{source.Code}}</p>
+        </div>
+        <i class="icon ion-arrow-right-c"></i>
+      </a>
+    </div>
+
+    </div>
+  </ion-content>
+</ion-view>

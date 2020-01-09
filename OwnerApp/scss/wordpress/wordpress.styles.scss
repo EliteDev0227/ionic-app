@@ -1,0 +1,127 @@
+.wordpress-view
+{
+  background-color: $content-bg !important;
+  vertical-align:middle;
+
+  .post-heading
+  {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background-color: darken($wordpress-heading-color, 10%);
+    border-color: #000;
+
+    .post-title
+    {
+      color: $wordpress-title-color;
+    }
+
+    .post-author
+    {
+      font-weight: 500;
+    }
+  }
+
+  .post-content
+  {
+    padding-top: 8px;
+    padding-bottom: 0px;
+
+    .post-excerpt
+    {
+      overflow: hidden;
+			text-overflow: ellipsis;
+			@include display(flex);
+			@include flex-direction(column);
+      line-height: $post-font-size + 4;        /* fallback */
+      font-size: $post-font-size;        /* fallback */
+
+      *
+      {
+        font-size: inherit !important;
+      }
+    }
+
+    // Audio fix
+    .wp-audio-shortcode
+    {
+      visibility: visible !important;
+    }
+
+    // Fix audio tag not displaying to 100% on ios
+    audio::-webkit-media-controls-panel
+    {
+      width: 100% !important;
+    }
+
+    img
+    {
+      margin: 10px 0px;
+      height: auto;
+      @include calc(width, "100% + #{($sides-padding*2)}");
+      margin-left: - $sides-padding;
+    }
+
+    ul, ol
+    {
+      list-style-type: square;
+      padding: 0 0 0 40px;
+      margin: 14px 0px;
+    }
+
+    iframe
+    {
+      margin: 10px 0px;
+      height: auto;
+      @include calc(width, "100% + #{($sides-padding*2)}");
+      margin-left: - $sides-padding;
+    }
+
+    blockquote
+    {
+      font-style: italic;
+      font-weight: 300;
+      margin: 20px 20px;
+      border: none;
+      padding: 0px;
+
+      p
+      {
+        font-size: 16px;
+      }
+    }
+
+    .post-actions
+    {
+      padding: 10px 0px;
+
+      .col
+      {
+        padding:0px;
+      }
+
+      .bookmark
+      {
+        .ion-bookmark
+        {
+          min-height: initial;
+          line-height: 28px;
+          padding: 0px;
+        }
+
+        .ion-bookmark:before
+        {
+          font-size: 28px;
+          line-height: 28px;
+        }
+      }
+
+      .read-more
+      {
+        .button
+        {
+          margin:0px;
+        }
+      }
+    }
+  }
+}

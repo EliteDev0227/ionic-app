@@ -1,0 +1,8 @@
+// App - Profile
+$image-width: 46vw;
+$image-max-width: 200px;
+
+$profile-bg: #FFFFFF;
+
+$profile-user-img-ratio: 1 1;
+$pre-img-ratios: append($pre-img-ratios, $profile-user-img-ratio);

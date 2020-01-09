@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-navbar color="custom">
+    <ion-title></ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+  <div class="post-head">
+    <h3 class="post-tile"> {{post.title}}</h3>
+    <p class="post-author">
+      By <span>{{post.author.nickname}}</span><span> {{post.date | amTimeAgo}}</span>
+    </p>
+  </div>
+  <div class="post-content">
+    <p class="post-text" style="font-size: 14px;" [innerHTML]="post.content"></p>
+  </div>
+  <div class="post-tags">
+    <span class="post-tags" *ngFor="let category of post.categories">
+      <button ion-button round full color="mainbtn" (click)="vationRent()">
+        {{category.title}}
+      </button>
+    </span>
+  </div>
+</ion-content>
+<ion-footer>
+  <div class="row">
+    <div class="col col-20 col-center">
+      <a (click)="biggerText()">A<ion-icon name="add"></ion-icon></a>
+    </div>
+    <div class="col col-20 col-center">
+      <a (click)="smallerText()">A<ion-icon name="remove"></ion-icon></a>
+    </div>
+    <div class="col col-20 col-offset-20 col-center">
+      <a (click)="setBookMark(post.url)">
+        <ion-icon ios="ios-heart" md="md-heart"></ion-icon>
+      </a>
+    </div>
+    <div class="col col-20 col-center">
+      <a (click)="sharePost(post.url)">
+        <ion-icon ios="ios-share" md="md-share"></ion-icon>
+      </a>
+    </div>
+  </div>
+</ion-footer>

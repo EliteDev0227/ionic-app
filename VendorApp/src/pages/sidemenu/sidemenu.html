@@ -1,0 +1,24 @@
+<ion-split-pane>
+  <ion-menu type="overlay" [content]="content">
+    <ion-content>
+      <div class="topInfo" (click)="viewProfile()">
+        <div class="topProIcon"><img src="{{photoUrl}}" class="profilePhoto"></div>
+        <div class="proName">{{currentUser.full_name}}</div>
+      </div>
+      <ion-list>
+        <div *ngFor="let p of pages" (click)="openPage(p)" style="border-top: 1px solid #ddd;">
+          <button menuClose ion-item class="menubtn">
+            <img src="{{p.image}}" class="imgSize">
+            <span class="navTxt"> {{p.title}}</span>
+          </button>
+        </div>
+      </ion-list>
+      <div class="bottom_cont">
+          <p>Member Since</p>
+          <h5>{{currentUser.member_since}}</h5>
+      </div>
+    </ion-content>
+
+  </ion-menu>
+  <ion-nav [root]="rootPage" main #content></ion-nav>
+</ion-split-pane>

@@ -1,0 +1,35 @@
+<ion-view class="profile-view">
+  <ion-nav-title>
+    <span>Profile</span>
+  </ion-nav-title>
+  <ion-content>
+    <div class="top-content row">
+      <div class="profile-container">
+        <div class="user-image-container">
+          <pre-img ratio="_1_1" helper-class="rounded-image">
+            <img class="user-image" ng-src="{{$storage.units[0].thumbnail}}" spinner-on-load>
+          </pre-img>
+        </div>
+        <br>
+        <br>
+        <div class="user-name">{{$storage.profile.sFirst_nm}} {{$storage.profile.sLast_nm}}</div>
+        <div class="user-twitter">{{profile.sHPhone_no}}</div>
+      </div>
+      <div class="user-background-image-outer">
+        <div multi-bg="[image]"></div>
+        <!-- <div multi-bg="['https://s3.amazonaws.com/uifaces/faces/twitter/brynn/128.jpg']"></div> -->
+      </div>
+    </div>
+    <div class="bottom-content">
+      <div class="user-bio">
+
+        <div class="row" ng-repeat="(title, value) in profile track by $index">
+          <div class="col text-left">{{title}}</div>
+          <div class="col text-right">{{value}}</div>
+
+        </div>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

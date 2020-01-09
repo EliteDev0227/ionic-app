@@ -1,0 +1,37 @@
+<ion-header no-border>
+  <ion-navbar color="custom">
+    <ion-title>Connect</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content no-padding>
+  <div class="top_content">
+    Maintenance Department
+  </div>
+  <div class="main_content">
+    <div class="main_content_title" *ngFor="let connect  of connects let idx=index" (click)="viewConnect(idx)">
+      <div class="sub_main_start">
+        <img src="./assets/imgs/connect/user.svg" alt="">
+        <p>{{connect.name}}</p>
+      </div>
+      <div class="sub_main_end" >
+        <img src="./assets/imgs/connect/phone.svg" alt="">
+      </div>
+    </div>
+  </div>
+
+  <div class="top_content">
+      Housekeeping Department
+    </div>
+    <div class="main_content">
+      <div class="main_content_title" *ngFor="let connecthk  of connect_hskp let idx=index" (click)="viewConnectHouseKp(idx)">
+        <div class="sub_main_start">
+          <img src="./assets/imgs/connect/user.svg" alt="">
+          <p>{{connecthk.name}}</p>
+        </div>
+        <div class="sub_main_end" >
+          <img src="./assets/imgs/connect/phone.svg" alt="">
+        </div>
+      </div>
+    </div>
+
+</ion-content>

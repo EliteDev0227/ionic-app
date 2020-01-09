@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar color="custom">
+    <ion-title>Oceanfront Rentals</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content no-padding>
+  <ion-list>
+    <ion-item *ngFor="let res of resData" (click)="rentDetails(res.UnitID)">
+      <div class="elencoImg"><img src="https://www.siebert-realty.com/units/pics/{{res.UnitID}}.jpg" alt=""></div>
+      <div class="elencoTxt">
+        <div class="restroName">{{res.Name}} - {{res.UnitID}}</div>
+        <div class="restroDes">{{res.location}}</div>
+        <div class="restroDes">
+            <span class="subDes">{{res.baths}} Baths </span>
+            <span class="subDes">{{res.brs}} Bed </span>
+            <span class="subDes">{{res.baths}} Sleeps </span>
+        </div>
+      </div>
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,69 @@
+<ion-header no-border>
+  <ion-navbar color="custom">
+    <ion-title>Settings</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content no-padding>
+  <div class="content_tile">TOGGLE</div>
+  <ion-item>
+    <ion-label>Enable Push Notifications</ion-label>
+    <ion-toggle [(ngModel)]="push" (ionChange)="changePush()"></ion-toggle>
+  </ion-item>
+  <ion-item>
+    <ion-label>Enable Vibration</ion-label>
+    <ion-toggle [(ngModel)]="vibrationData" (ionChange)="changeVibration()"></ion-toggle>
+  </ion-item>
+  <div class="content_tile">Sibert Contact</div>
+  <div class="content_tile">Maintenance Department</div>
+
+  <ion-list radio-group [(ngModel)]="connectData">
+      <ion-item *ngFor="let connect  of connects let idx=index">
+        <ion-label>{{connect.name}}</ion-label>
+        <ion-radio value="{{connect.name}}" ></ion-radio>
+      </ion-item>
+    </ion-list>
+
+
+
+  <!-- <div class="main_content">
+    <div class="main_content_title" *ngFor="let connect  of connects let idx=index" (click)="viewConnect(idx)">
+      <div class="sub_main_start">
+        <img src="./assets/imgs/connect/user.svg" alt="">
+        <p>{{connect.name}}</p>
+      </div>
+      <div class="sub_main_end" >
+        <ion-checkbox [(ngModel)]="connect.name"></ion-checkbox>
+      </div>
+    </div>
+  </div> -->
+
+
+
+
+
+  <div class="content_tile"> Housekeeping Department</div>
+  <!-- <div class="main_content">
+    <div class="main_content_title" *ngFor="let connecthk  of connect_hskp let idx=index" (click)="viewConnectHouseKp(idx)">
+      <div class="sub_main_start">
+        <img src="./assets/imgs/connect/user.svg" alt="">
+        <p>{{connecthk.name}}</p>
+      </div>
+      <div class="sub_main_end" >
+          <ion-radio value="connecthk.name"></ion-radio>
+      </div>
+    </div>
+  </div> -->
+
+  <ion-list radio-group [(ngModel)]="connecthkData">
+    <ion-item *ngFor="let connecthk  of connect_hskp let idx=index">
+      <ion-label>{{connecthk.name}}</ion-label>
+      <ion-radio value="{{connecthk.name}}" ></ion-radio>
+    </ion-item>
+  </ion-list>
+
+
+
+  <div class="settingBtn" (click)="confirm()">
+    <button ion-button round class="changeBtn">Save</button>
+  </div>
+</ion-content>

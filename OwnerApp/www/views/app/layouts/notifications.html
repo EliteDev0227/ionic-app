@@ -1,0 +1,22 @@
+<ion-view class="layouts-view">
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  <ion-nav-title>
+    <span>Notifications</span>
+  </ion-nav-title>
+  <ion-content>
+    <ion-refresher pulling-text="Pull to refresh..." on-refresh="loadNotifications()">
+    </ion-refresher>
+    NOTIFICATIONS HERE LIVE
+    <div class="list layouts-functionalities">
+      <a ng-repeat="item in notifications" class="item " ui-sref="app.tinder-cards">
+        <div>
+          <span class="title">{{item.guest_name}} left a review</span>
+          <p class="description">{{item.arrival_date}}</p>
+        </div>
+      </a>
+
+    </div>
+  </ion-content>
+</ion-view>

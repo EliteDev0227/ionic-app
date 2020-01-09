@@ -1,0 +1,70 @@
+{
+  "project_info": {
+    "project_number": "648371285185",
+    "firebase_url": "https://siebert-guest-app.firebaseio.com",
+    "project_id": "siebert-guest-app",
+    "storage_bucket": "siebert-guest-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:648371285185:android:38e177c8f6fb0976",
+        "android_client_info": {
+          "package_name": "com.vacation.sieberter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "648371285185-jcvipcjar9gbrdt2bs15f3oc3e1nl770.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.vacation.sieberter",
+            "certificate_hash": "20253a89ddea6276a462282f9f9e06b4ab3d76df"
+          }
+        },
+        {
+          "client_id": "648371285185-k66l6l3vrrh6mdhtq4sm4ncj60v7vjcu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.vacation.sieberter",
+            "certificate_hash": "a4ecdda5c544556d15f3d81fdf8c5ed89094990c"
+          }
+        },
+        {
+          "client_id": "648371285185-ea07sm8pnahfjpvoqu1b0m9hbo8q2e59.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-U-2thyf2lCIpZOGjepOz7hj7DA52Nak"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "648371285185-ea07sm8pnahfjpvoqu1b0m9hbo8q2e59.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "648371285185-kmp1u6krbvelmsit003mg4lgu0ercqvv.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.vacation.sieberter"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

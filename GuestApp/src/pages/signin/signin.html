@@ -1,0 +1,66 @@
+<ion-content no-padding>
+  <ion-segment [(ngModel)]="tabs" (ionChange)="segmentChanged()">
+    <ion-segment-button value="lease">
+      Lease Holder
+    </ion-segment-button>
+    <ion-segment-button value="guest">
+      Guest
+    </ion-segment-button>
+  </ion-segment>
+  <div [ngSwitch]="tabs" padding>
+    <div *ngSwitchCase="'lease'">
+      <div class="signin_container">
+        <p class="signin_title">
+          Sign In
+        </p>
+        <div class="main_cont">
+          <ion-input type="text" [(ngModel)]="userInfo.email" placeholder="User Email"></ion-input>
+          <ion-input type="password" [(ngModel)]="userInfo.pwd" placeholder="Password"></ion-input>
+        </div>
+        <div class="signin_signinbtn">
+          <button ion-button round full color="mainbtn" (click)="signinUser()">
+            Sign In
+          </button>
+        </div>
+        <div class="signin_signupbtn">
+          <span (click)="gotoResetPage()">
+            Forgot Password?/
+          </span>
+          <span (click)="registerUser()">
+            Sign Up
+          </span>
+        </div>
+      </div>
+    </div>
+    <div *ngSwitchCase="'guest'">
+      <div class="signin_container">
+        <p class="signin_title">
+          Sign In
+        </p>
+        <div class="main_cont">
+          <ion-input type="text" [(ngModel)]="guest.email" placeholder="User Email"></ion-input>
+          <ion-input type="password" [(ngModel)]="guest.pwd" placeholder="Password"></ion-input>
+          <ion-input type="tel" [(ngModel)]="guest.shareCode" placeholder="ShareCode"></ion-input>
+        </div>
+        <div class="signin_signinbtn">
+          <button ion-button round full color="mainbtn" (click)="signInGuest()">
+            Sign In
+          </button>
+          <button ion-button round block outline color="mainbtn" (click)="selectPhone()" style="border: none;">
+            <ion-icon name="call"></ion-icon> &nbsp;
+            With Phone Number
+          </button>
+        </div>
+        <div class="signin_signupbtn">
+          <span (click)="gotoResetPage()">
+            Forgot Password?/
+          </span>
+          <span (click)="signUpGuest()">
+            Sign Up
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</ion-content>

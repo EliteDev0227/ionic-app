@@ -1,0 +1,74 @@
+page-myalert {
+  .toolbar-title-md {
+    color: #fff;
+    font-weight: bold;
+  }
+  .content{
+    background: white !important;
+  }
+  .button-inner {
+    background-image: url("../assets/imgs/menu.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 30px;
+    max-width: 25px;
+  }
+  .back-button-icon-md {
+    display: none;
+  }
+  .back-button-text-ios{
+    display: none !important;
+  }
+  .back-button-icon-ios{
+    opacity: 0;
+  }
+  .elencoImg img {
+    border-radius: 50%;
+    width: 40px !important;
+    height: 40px !important;
+    margin-left: 2vh;
+  }
+  .elencoTxt {
+    width: 75%;
+    margin-left: 2vh;
+  }
+
+  .restroName {
+    font-size: 2.5vh;
+    color: #0db4e1;
+    padding-bottom: 5px;
+    white-space: normal;
+  }
+
+  .restroDes {
+    font-size: 1.8vh;
+    padding-bottom: 5px;
+    color: #999999;
+    white-space: normal;
+  }
+
+  ion-label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 5px !important;
+  }
+
+  .content_tile {
+    font-size: 1.4rem;
+    padding: 7px 0 7px 10px;
+    background: #046580;
+    color: #fff;
+
+  }
+  ion-list{
+      margin-bottom: 1rem !important;
+  }
+  ion-item{
+    padding: 0 !important;
+    background: #eee !important;
+    border: none !important;
+    border-radius: 1rem;
+  }
+}

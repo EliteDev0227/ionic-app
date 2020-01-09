@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-navbar color="custom">
+    <ion-title>{{tripsData.trips[tripId].unit_name}}</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content no-padding>
+  <div class="top_content">
+    <img src="{{tripsData.trips[tripId].unit_thumbnail}}" />
+    <p>{{tripsData.trips[tripId].arrival_date}}~{{tripsData.trips[tripId].departure_date}}</p>
+  </div>
+  <div class="home_title">
+    <p>{{tripsData.profile.first_name}}{{tripsData.profile.last_name}}</p>
+  </div>
+  <div class="message_content">
+    <div class="message_title">
+      <ion-icon ios="ios-chatbubbles" md="md-chatbubbles"></ion-icon>
+      <p>Messages</p>
+    </div>
+    <div class="message_body">
+      <li>We do not have a singed lease</li>
+      <li>We do not have a singed lease</li>
+    </div>
+  </div>
+  <div class="mainCont">
+    <div class="subCont" (click)="viewPaymentData()"><img src="./assets/imgs/home/payment.png">
+      <p>Make a <br>Payment</p>
+    </div>
+    <div class="subCont" (click)="viewLeaseData()"><img src="./assets/imgs/home/lease.png">
+      <p>View My <br>Lease</p>
+    </div>
+    <div class="subCont right" (click)="viewRentalData()"><img src="./assets/imgs/home/rental.png">
+      <p>Browse<br> Rentals</p>
+    </div>
+  </div>
+  <div class="arrival">
+    <div class="arrival_title">
+      <p>Getting Here</p> &nbsp;&nbsp;
+      <img src="./assets/imgs/home/guide.png">
+    </div>
+    <div class="arrival_content">
+      <p>601 Sandbridge Road Virginia Beach, VA 23456</p>
+    </div>
+    <div class="arrival_btn">
+      <button ion-button outline color="homecolor" class="homebtn" (click)="viewMapData()">View Map</button>
+    </div>
+  </div>
+
+</ion-content>

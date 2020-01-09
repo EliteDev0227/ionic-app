@@ -1,0 +1,39 @@
+<ion-header no-border>
+  <ion-navbar color="custom">
+    <ion-title>Upload Attachments</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <div class="top_content">
+    <button ion-button round full color="mainbtn" (click)="openImagePicker()"> Select Images</button>
+    <button ion-button round outline color="mainbtn" (click)="shareAll()" *ngIf="images.length > 0"> Save Attachments</button>
+  </div>
+
+  <!-- <div class="mid_content" *ngFor="let img  of imagesData; let idx=index">
+    <div class="mid_img">
+        <img src="{{img}}" alt="">
+    </div>
+    <div class="mid_sub_cont">
+      <div class="sub_cont" (click)="shareImage(img)">
+          <ion-icon name="share"></ion-icon>  &nbsp; Share
+      </div>
+      <div class="sub_cont" (click)="testData(img)">
+          <ion-icon name="trash"></ion-icon> &nbsp; Remove
+      </div>
+    </div>
+  </div> -->
+
+  <div class="mid_content" *ngFor="let img  of images; let idx=index">
+    <div class="mid_img">
+      <img src="{{img}}" alt="">
+    </div>
+    <div class="mid_sub_cont">
+      <div class="sub_cont" (click)="shareImage(img)">
+        <ion-icon name="share"></ion-icon> &nbsp; Share
+      </div>
+      <div class="sub_cont" (click)="remove(img)">
+        <ion-icon name="trash"></ion-icon> &nbsp; Remove
+      </div>
+    </div>
+  </div>
+</ion-content>

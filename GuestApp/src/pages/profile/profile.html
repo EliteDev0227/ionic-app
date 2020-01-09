@@ -1,0 +1,55 @@
+<ion-header no-border>
+  <ion-navbar color="custom">
+    <ion-title color="white">Profile Page</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding no-bounce>
+  <div class="signup_avatar">
+    <img src="{{userInfo.photoURL}}" (click)="getAvatarOption()" />
+  </div>
+  <ion-row>
+    <ion-col width-50>
+      <ion-item>
+        <ion-label floating>
+          First Name
+        </ion-label>
+        <ion-input type="text" [(ngModel)]="userInfo.firstname"></ion-input>
+      </ion-item>
+    </ion-col>
+    <ion-col width-50>
+      <ion-item>
+        <ion-label floating>
+          Last Name
+        </ion-label>
+        <ion-input type="text" [(ngModel)]="userInfo.lastname"></ion-input>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+  <ion-item>
+    <ion-label floating>
+      Email
+    </ion-label>
+    <ion-input type="email" [(ngModel)]="userInfo.email"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>
+      Password
+    </ion-label>
+    <ion-input type="password" [(ngModel)]="userInfo.pwd"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>
+      Phone Number
+    </ion-label>
+    <ion-input type="tel" [(ngModel)]="userInfo.phone"></ion-input>
+  </ion-item>
+
+  <div class="signup_controllers">
+    <div>
+      <button ion-button round full color="mainbtn" (click)="update()" class="confirm_btn">Update</button>
+    </div>
+    <div>
+      <button ion-button round full (click)="closeSignupModal()" class="confirm_btn">Cancel</button>
+    </div>
+  </div>
+</ion-content>

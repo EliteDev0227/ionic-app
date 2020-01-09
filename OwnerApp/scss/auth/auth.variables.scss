@@ -1,0 +1,7 @@
+$auth-color: #FFFFFF;
+$show-hide-password-color: lighten(#444444, 25%);
+$auth-tabs-highlight: $theme-color-1;
+$auth-tabs-bg: $theme-color-3;
+$auth-tabs-color: darken($auth-color, 10%);
+$auth-login-btn-bg: rgba($theme-color-1, .8);
+$auth-signup-btn-bg: rgba($theme-color-2, .8);

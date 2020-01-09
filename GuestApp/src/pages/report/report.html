@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-navbar color="custom">
+    <ion-title style="text-align:center;">Report an issues</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="close()">
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <div class="top_cont">
+    <img src="./assets/imgs/siebert.png">
+    <div class="top_title">
+      <p>Use the following from the report any maintenance issues or concerns directly to our Go Team.</p>
+    </div>
+  </div>
+  <ion-item>
+    <ion-label>Select Floor</ion-label>
+    <ion-select [(ngModel)]="floor" okText="Okay" cancelText="Dismiss">
+      <ion-option value="fl_0">Chosse wihich floor</ion-option>
+      <ion-option value="fl_1">Level 1</ion-option>
+      <ion-option value="fl_2">Level 2</ion-option>
+      <ion-option value="fl_3">Level 3</ion-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label>Issue Location</ion-label>
+    <ion-select [(ngModel)]="location" okText="Okay" cancelText="Dismiss">
+      <ion-option value="lo_1">Chosse wihich location</ion-option>
+      <ion-option value="lo2">Bathroom</ion-option>
+      <ion-option value="lo_2">Bedroom</ion-option>
+      <ion-option value="lo_3">Kitchen</ion-option>
+      <ion-option value="lo_4">Outside Area</ion-option>
+      <ion-option value="lo_5">Garage</ion-option>
+      <ion-option value="lo_6">Not Listed?</ion-option>
+    </ion-select>
+  </ion-item>
+  <div class="report_cont">
+    <ion-item>
+      <ion-label floating>Details about the maintanence issue you are reporting</ion-label>
+      <ion-textarea #myInput id="myInput" rows="5" maxLength="500" (keyup)="resize()" [(ngModel)]="issue_content"></ion-textarea>
+    </ion-item>
+  </div>
+  <div class="upload-image" *ngIf="ishidden">
+      <img src="{{photos}}"  class="imageSetting">
+  </div>
+<div class="upload-btn">
+  <button ion-button round full color="promobtn" (click)="upload()">
+      <ion-icon name="cloud-upload"></ion-icon> &nbsp; &nbsp; Upload file</button>
+</div>
+  <div class="footer-btn">
+    <button ion-button round full color="mainbtn" (click)="confirm()"> Send</button>
+  </div>
+</ion-content>

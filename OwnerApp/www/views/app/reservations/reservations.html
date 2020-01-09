@@ -1,0 +1,77 @@
+<ion-view class="profile-view">
+
+  <style>
+    .bar.app-top-bar .title *, .bar.app-top-bar .button *{text-transform: capitalize}
+    .profile-view .top-content h2 {
+      position: absolute;
+      bottom: 3px;
+      right: 0;
+      padding: 0 13px;
+      color: white;
+      text-transform: capitalize;
+    }
+    .profile-view .top-content {
+
+      margin-bottom: 0;
+    }
+  </style>
+  <ion-nav-title>
+    <span class="capitalize">{{unit.UnitName}} Reservations</span>
+
+  </ion-nav-title>
+  <ion-nav-buttons side="right">
+    <button class="button button-icon button-clear"  ng-click="reservationSearch()">
+      <i class=" fa fa-plus"></i>
+    </button>
+  </ion-nav-buttons>
+  <ion-content>
+    <ion-refresher pulling-text="Pull to refresh..." on-refresh="doRefresh(id)">
+    </ion-refresher>
+    <div class="top-content row">
+
+      <h2>{{unit.UnitName}}</h2>
+      <div class="user-background-image-outer">
+        <div multi-bg="[thumbnail]"></div>
+        <!-- <div multi-bg="['https://s3.amazonaws.com/uifaces/faces/twitter/brynn/128.jpg']"></div> -->
+      </div>
+    </div>
+    <div class="row meta " style="background: url('');">
+      <div class="col-25 text-center"><br>
+
+      </div>
+      <div class="col-75 text-center">
+
+      </div>
+      </div>
+      <div class="row " style="    background: rgba(98,87,213,0.85);">
+        <h5   class="padding-top light text-right" >
+          <i class="fa fa-question-circle light"></i> {{meta.Income}}
+          YTD: {{meta.TotalReservations}}
+        </h5>
+        <p style="    color: #fff;padding: 13px 0;margin: 0;">
+      </p>
+      </div>
+    <div class="entries-list">
+  <!--<pre>{{reservations}}-->
+          <!--</pre>-->
+    <div class="list category-feeds">
+      <div ng-repeat="source in reservations " ng-click="reservationDetails(source.confno)" class="item   {{source.Code}}" >
+
+
+
+        <div>
+          <span class="title">{{source.sPrintOnCheckAs_nm}}</span>
+          <p class="description">{{source.Date}}</p>
+          <p class="price">{{source.Rent}} - {{source.Code}}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="bottom-content">
+      <div class="user-bio">
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+      </div>
+    </div>
+    </div>
+  </ion-content>
+</ion-view>

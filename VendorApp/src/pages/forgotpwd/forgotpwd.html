@@ -1,0 +1,25 @@
+<ion-header no-border>
+  <ion-navbar color="custom">
+    <ion-title color="white" style="text-align: center">Forget Password</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <p>Reset your password</p>
+  <div class="main_top">
+    <div class="main_image">
+      <img src="assets/imgs/siebert.png" />
+    </div>
+  </div>
+  <div class="main_cont">
+    <ion-input type="text" [(ngModel)]="useremail" placeholder="Enter your email address"></ion-input>
+  </div>
+
+  <div class="forgot_controllers">
+    <div>
+      <button ion-button round color="mainbtn" (click)="resetPassword()">Reset</button>
+    </div>
+    <div>
+      <button ion-button round color="mainbtn" outline (click)="closeForgotModal()">Close</button>
+    </div>
+  </div>
+</ion-content>

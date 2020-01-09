@@ -1,0 +1,118 @@
+<ion-header no-border>
+  <ion-navbar color="custom">
+    <ion-title>{{workhistoryData.id}}: &nbsp;{{workhistoryData.title}}</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content no-padding>
+  <div class="top_content" *ngIf="workhistoryData.woEnded">
+    <div class="job_title">
+      <ion-icon name="checkmark-circle"></ion-icon>
+      <p>Great Job!</p>
+    </div>
+    <div class="job_date">
+      <p>Job update to <strong>completed</strong> on <strong>{{workhistoryData.woEndDate}}</strong></p>
+    </div>
+  </div>
+
+  <div class="top_content" *ngIf="workhistoryData.woStarted && !workhistoryData.woEnded">
+    <div class="job_title1">
+      <ion-icon name="checkmark-circle"></ion-icon>
+      <p>In Progress!</p>
+    </div>
+    <div class="job_date">
+      <p>You been working since <strong>{{workhistoryData.woStartDate}}</strong></p>
+    </div>
+  </div>
+
+
+  <div class="mid_content">
+    <div class="mid_title">
+      <img src="{{workhistoryData.unitImage}}" alt="">
+      <h2>{{workhistoryData.unitName}} - {{workhistoryData.unitID}}</h2>
+      <p>{{workhistoryData.unitAddress}}</p>
+      <p>{{workhistoryData.unitPhone}}</p>
+    </div>
+    <div class="mid_desc">
+      <p>{{workhistoryData.woDesc}}</p>
+    </div>
+  </div>
+
+  <div class="note_content"  *ngIf="workhistoryData.woStarted">
+    <div class="note_title">
+      <div class="sub_cat_start">
+        <h2>My Notes</h2>
+      </div>
+      <div class="sub_cat_end" (click)="viewNoteData()">
+        <img src="./assets/imgs/order/pencil.svg" alt="">
+      </div>
+    </div>
+    <div class="note_desc" *ngIf="workhistoryData.woWorkDone != ''">
+      <p>{{workhistoryData.woWorkDone}}</p>
+    </div>
+    <div class="note_desc" *ngIf="workhistoryData.woWorkDone == ''">
+      <p>You haven't said anything yet.</p>
+      <button ion-button round outline color="mainbtn" (click)="viewNoteData()">Add Notes</button>
+    </div>
+  </div >
+
+  <div class="cat_content"  *ngIf="workhistoryData.woStarted && !workhistoryData.woEnded">
+    <div class="cat_content_title" (click)="viewContact(0)">
+      <div class="sub_cat_start">
+        <p>Take Photo</p>
+      </div>
+      <div class="sub_cat_end">
+        <img src="./assets/imgs/order/camera.svg" alt="">
+      </div>
+    </div>
+    <div class="upload_img" *ngIf="workhistoryData.image">
+      <img src="{{workhistoryData.image}}" alt="">
+    </div>
+
+    <div class="cat_content_title" (click)="viewContact(1)">
+      <div class="sub_cat_start">
+        <p>Add Invoice *</p>
+      </div>
+      <div class="sub_cat_end">
+        <img src="./assets/imgs/order/invoice.svg" alt="">
+      </div>
+    </div>
+
+    <div class="cat_content_title" (click)="viewContact(2)">
+      <div class="sub_cat_start">
+        <p>Call Property</p>
+      </div>
+      <div class="sub_cat_end">
+        <img src="./assets/imgs/order/call.svg" alt="">
+      </div>
+    </div>
+
+
+
+    <div class="cat_content_title" (click)="viewContact(4)">
+      <div class="sub_cat_start">
+        <p>Contact Office</p>
+      </div>
+      <div class="sub_cat_end">
+        <img src="./assets/imgs/order/contact1.svg" alt="">
+      </div>
+    </div>
+
+    <div class="cat_content_title" (click)="viewContact(5)">
+      <div class="sub_cat_start">
+        <p>Get Directions</p>
+      </div>
+      <div class="sub_cat_end">
+        <img src="./assets/imgs/order/map2.svg" alt="">
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="bottom_content">
+    <button ion-button round full color="mainbtn" (click)="startJob()" *ngIf="workhistoryData.action == 'startjob'">
+      Start Job </button>
+    <button ion-button round full color="promobtn" (click)="endJob()" *ngIf="workhistoryData.action == 'endjob'"> End
+      Job </button>
+  </div>
+</ion-content>

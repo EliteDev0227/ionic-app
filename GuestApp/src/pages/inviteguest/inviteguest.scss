@@ -1,0 +1,70 @@
+page-inviteguest {
+  .modal_page {
+    width: 100%;
+    margin-top: 3vh;
+    background: white;
+    border-radius: 5px;
+    margin-bottom: 12vh;
+  }
+
+  .modal_button {
+    display: flex;
+    padding: 0 3rem 1rem 3rem;
+    .button {
+      margin: 1rem;
+    }
+  }
+
+  .scroll-content {
+    background: transparent !important;
+  }
+
+  .content {
+    background: transparent !important;
+  }
+
+  .top_bar{
+    display: flex;
+    background: #008bc5;
+    font-size: 2rem;
+  }
+  .top_sub{
+    flex: 5;
+    color: white;
+    p{
+      text-align: center;
+      margin: 3%;
+      font-weight: bold;
+    };
+
+  }
+  .top_sub_btn{
+    flex: 1;
+    color: white;
+    font-size: 2.5rem;
+    margin: auto;
+    .close_btn{
+      font-size: 2.3rem;
+      text-align: right;
+      margin-right: 1rem !important;
+    }
+  }
+  .mid_content{
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    text-align: center;
+    color: #635f5f;
+    p{
+      margin: 1rem;
+    };
+    .top_user{
+      margin: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 1rem;
+      padding-left: 1rem;
+    };
+    h3{
+      color: black;
+    }
+  }
+}

@@ -1,0 +1,107 @@
+page-rentsub {
+  .toolbar-title-md {
+    color: #fff;
+    font-weight: bold;
+  }
+
+  .content{
+    background: white !important;
+  }
+
+  .elencoImg {
+    padding-right: 15px;
+    width: 120px;
+  }
+
+  .elencoImg img {
+    border-radius: 15%;
+    width: 75px !important;
+    height: 75px !important;
+    border: solid 1px #a59b9b;
+  }
+
+  .restroName {
+    font-size: 1.5rem;
+    color: #111;
+    padding-bottom: 5px;
+    white-space: normal;
+  }
+
+  .restroDes {
+    font-size: 1.3rem;
+    padding-bottom: 5px;
+    color: #999999;
+    white-space: normal;
+    display: flex
+  }
+
+  .subDes {
+    flex: 1
+  }
+
+  .restroNum a {
+    color: #000;
+    text-decoration: none;
+    font-size: 1.3rem;
+  }
+
+  .restoBtns {
+    margin-top: 10px;
+  }
+
+  .restoBtns a {
+    display: inline-block;
+  }
+
+  .restoBtns a:first-child,
+  .restoBtns a:last-child {
+    background: #7cad31 url(../assets/imgs/resturant/phoneBgIcon.png) no-repeat 2px 2px;
+    background-size: 26px 26px;
+    padding: 7px 18px 7px 38px;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 1.2rem;
+    text-decoration: none
+  }
+
+  .restoBtns a:last-child {
+    background: #993300 url(../assets/imgs/resturant/menuIcon.png) no-repeat 2px 2px;
+    background-size: 26px 26px;
+    margin-left: 5px;
+  }
+
+  .item{
+    border-bottom: none !important;
+    background: #eee !important;
+    margin-top: 10px;
+  }
+
+  ion-label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .elencoTxt {
+    width: 75%;
+  }
+
+  .item-md.item-block .item-inner {
+    border-bottom: none !important;
+    height: auto !important;
+
+  }
+
+  .list-md>.item-block:last-child .item-inner {
+    height: auto !important;
+  }
+
+  .list-ios .item-block .item-inner {
+    border-bottom: none !important;
+    border-top: none !important;
+    height: auto !important;
+    background: #f1f2f2;
+    margin-right: 0px !important;
+    padding-left: 16px;
+  }
+}

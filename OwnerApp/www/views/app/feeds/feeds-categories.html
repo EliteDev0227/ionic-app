@@ -1,0 +1,21 @@
+<ion-view class="feeds-categories-view">
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  <ion-nav-title>
+    <span>Feeds Categories</span>
+  </ion-nav-title>
+  <ion-content>
+    <div class="row categories-list">
+      <div ng-repeat="category in feeds_categories" class="col col-50">
+        <a class="feed-category" ui-sref="app.category-feeds({categoryId: (category.title | slugify)})">
+          <pre-img ratio="_1_1" helper-class="square-image">
+            <img class="category-image" ng-src="{{category.image}}" spinner-on-load>
+          </pre-img>
+          <div class="category-bg"></div>
+          <span class="category-title">{{category.title}}</span>
+        </a>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

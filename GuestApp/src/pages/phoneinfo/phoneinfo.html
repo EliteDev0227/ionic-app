@@ -1,0 +1,23 @@
+<ion-header  no-border>
+    <ion-navbar color="custom">
+      <ion-title style="text-align: center">Select Country</ion-title>
+      <ion-buttons end>
+          <button ion-button (click)="close()">
+              <ion-icon ios="ios-close" md="md-close"></ion-icon>
+          </button>
+        </ion-buttons>
+    </ion-navbar>
+  </ion-header>
+  <ion-content padding>
+    <ion-searchbar [(ngModel)]="searchTerm" [formControl]="searchControl" (ionInput)="onSearchInput()"></ion-searchbar>
+    <div *ngIf="searching" class="spinner-container">
+        <ion-spinner></ion-spinner>
+    </div>
+    <ion-list>
+      <button ion-item *ngFor="let item of items" (click)="getCountryCode(item.code)">
+          <img src="{{item.images}}" class="flag-icon">
+          <label style="margin-left: 20px">{{item.name}}</label>
+          <label style="float: right;">{{item.dial_code}}</label>
+      </button>
+  </ion-list>
+  </ion-content>

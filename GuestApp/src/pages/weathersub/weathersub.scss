@@ -1,0 +1,71 @@
+page-weathersub {
+    .top_cont{
+        padding: 5px;
+        margin: 10px;
+        border-radius: 5px;
+        background: #e5e5e5;
+        box-shadow: 2px 3px #888888;
+        padding-top: 10px;
+        font-family: "varela_roundregular";
+    }
+    .sub_cont{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+            max-width: 65px;
+        }
+    }
+    .top_cont_txt{
+        text-align: center;
+        font-size: 2.3rem;
+        p{
+            padding-bottom: 0px;
+            margin-bottom: 0px;
+        }
+    }
+    .main_content {
+        margin-top: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
+        border-radius: 5px;
+        border: 1px solid #e5e5e5;
+        background: #e5e5e5;
+      }
+      .main_content_title {
+        padding-left: 10px;
+        border-bottom: 1px solid #ddd;
+        font-size: 1.6rem;
+        font-family: "varela_roundregular";
+      }
+      .detail_content{
+          display: flex;
+          background: white;
+          border-bottom: 1px solid  #a09e9e;
+
+      }
+      .start_detail_content{
+          flex: 1;
+          display: flex;
+          align-items: center;
+          justify-content: start;
+          padding-left: 10px;
+          img{
+            border-radius: 50%;
+            width: 65px !important;
+            height: 65px !important;
+            // margin: 10px
+          }
+      }
+      .end_details_content{
+          flex: 2;
+          p{
+            margin-left: 10px;
+            color: #6f6a6a;
+          }
+      }
+      .temp_title{
+        margin-top: 10px;
+        font-size: 1.7rem;
+      }
+}

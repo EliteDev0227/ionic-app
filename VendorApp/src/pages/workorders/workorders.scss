@@ -1,0 +1,171 @@
+page-workorders {
+  .content {
+    background: white !important;
+  }
+
+  .toolbar-title-md {
+    color: #fff;
+    font-weight: bold;
+  }
+
+  .button-inner {
+    background-image: url("../assets/imgs/menu.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 30px;
+    max-width: 25px;
+  }
+
+  .back-button-icon-md {
+    display: none !important;
+  }
+
+  .back-button-text-ios {
+    display: none !important;
+  }
+
+  .back-button-icon-ios {
+    opacity: 0;
+  }
+
+  ion-footer {
+    height: 5rem;
+    background: #bcbfc1;
+
+    .main_foot {
+      display: flex;
+
+      .sub_foot {
+        flex: 1;
+        width: 33%;
+        text-align: center;
+
+        img {
+          padding-top: 0.2rem;
+          min-width: 40px;
+          width: 2.7rem;
+          height: 2.7rem;
+        }
+
+        p {
+          margin: 0px;
+          font-size: 1.3rem;
+          color: #444;
+        }
+      }
+    }
+  }
+
+  .top_content {
+    // ion-input {
+    //   margin: 1rem;
+    //   border-radius: 1rem;
+    //   padding-left: 1rem;
+    //   border: solid 1px #ddd;
+    //   background: #ddd;
+    //   width: 90%;
+    //   left: 50%;
+    //   transform: translate(-50%, 0);
+    // }
+    .spinner-container {
+      width: 100%;
+      text-align: center;
+      padding: 10px;
+    }
+  }
+
+  .middle_content {
+    .middle_current{
+      text-align: center;
+      h1{
+        border: 2px solid #00b2e3;
+        border-radius: 0.5rem;
+        padding: 1rem;
+        position: relative;
+        width: 80%;
+        left: 50%;
+        transform: translate(-50%,0);
+      }
+      img{
+        width: 80%;
+      }
+    }
+    .middle_bar {
+      height: 2rem;
+      width: 100%;
+      background: #00b2e3;
+      margin: 1rem 0 1rem 0;
+    }
+
+    .elencoImg img {
+      width: 45px !important;
+      height: 45px !important;
+      margin-left: 2vh;
+
+      padding: 0.4rem;
+      border-radius: 50%;
+      background: white;
+
+      border: 1px solid #ddd;
+    }
+
+    .elencoTxt {
+      width: 65%;
+      margin-left: 4vh;
+    }
+
+    .elecoBtn {
+      width: 10%;
+      font-size: 2rem;
+      font-weight: bold;
+      color: #736f6f;
+    }
+
+    .restroName {
+      font-size: 2.5vh;
+      color: #0db4e1;
+      padding-bottom: 5px;
+      white-space: normal;
+    }
+
+    .restroDes {
+      font-size: 1.8vh;
+      padding-bottom: 5px;
+      color: #999999;
+      white-space: normal;
+      padding-left: 1rem;
+    }
+
+    .restroNum {
+      color: #999999;
+      font-size: 1.8vh;
+      padding-left: 1rem;
+      span {
+        background: #00b2e3;
+        color: white;
+        padding: 0.3rem;
+        border-radius: 0.5rem;
+      }
+    }
+  }
+
+  ion-label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 3px !important;
+  }
+
+  .item {
+    padding: 0px !important;
+    background: #eee;
+    border-radius: 1rem;
+    margin-top: 5px;
+  }
+
+  .item.item-block .item-inner {
+    padding: 0px !important;
+    border: none !important;
+  }
+}

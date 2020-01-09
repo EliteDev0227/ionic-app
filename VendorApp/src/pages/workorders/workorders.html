@@ -1,0 +1,87 @@
+<ion-header>
+  <ion-navbar color="custom">
+    <ion-title>WorkOrders</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content no-padding>
+  <div class="top_content">
+    <!-- <ion-input type="text" [(ngModel)]="searchInput" placeholder="Search..." (ionChange)='searchData()'></ion-input> -->
+    <ion-searchbar [(ngModel)]="searchTerm" [formControl]="searchControl" (ionInput)="onSearchInput()"></ion-searchbar>
+    <div *ngIf="searching" class="spinner-container">
+      <ion-spinner></ion-spinner>
+    </div>
+  </div>
+  <div class="middle_content">
+    <div class="middle_bar"></div>
+<!--    <div class="middle_current" *ngIf="current == 'NOW'">
+      <h1>Great Job</h1>
+      <img src="./assets/imgs/tab/break-time.jpg" alt="">
+      <h3> Not much left to do here.</h3>
+    </div> -->
+    <div class="middle_past" *ngIf="current == 'PAST'">
+      <ion-item *ngFor="let order of workorders; let id=index" (click)="viewData(id)">
+        <div class="elencoImg"><img src="http://icons.iconarchive.com/icons/custom-icon-design/flatastic-10/128/{{order.woStatus}}.png"
+            alt=""></div>
+        <div class="elencoTxt">
+          <div class="restroName">{{order.woDesc}}</div>
+          <div class="restroDes">{{order.UnitAddress}} <br>
+            {{order.unitName}} - {{order.unitID}}
+          </div>
+          <div class="restroNum">{{order.woDate}}</div>
+        </div>
+        <div class="elecoBtn">
+          <ion-icon name="arrow-dropright"></ion-icon>
+        </div>
+      </ion-item>
+    </div>
+    <div class="middle_now" *ngIf="current == 'NOW'">
+      <ion-item *ngFor="let order of workorders; let id=index" (click)="viewData(id)">
+        <div class="elencoImg"><img src="http://icons.iconarchive.com/icons/custom-icon-design/flatastic-10/128/{{order.woStatus}}.png"
+            alt=""></div>
+        <div class="elencoTxt">
+          <div class="restroName">{{order.woDesc}}</div>
+          <div class="restroDes">{{order.UnitAddress}} <br>
+            {{order.unitName}} - {{order.unitID}}
+          </div>
+          <div class="restroNum">{{order.woDate}}</div>
+        </div>
+        <div class="elecoBtn">
+          <ion-icon name="arrow-dropright"></ion-icon>
+        </div>
+      </ion-item>
+    </div>
+    <div class="middle_future" *ngIf="current == 'FUTURE'">
+      <ion-item *ngFor="let order of workorders; let id=index" (click)="viewData(id)">
+        <div class="elencoImg"><img src="http://icons.iconarchive.com/icons/custom-icon-design/flatastic-10/128/{{order.woStatus}}.png"
+            alt=""></div>
+        <div class="elencoTxt">
+          <div class="restroName">{{order.woDesc}}</div>
+          <div class="restroDes">{{order.UnitAddress}} <br>
+            {{order.unitName}} - {{order.unitID}}
+          </div>
+          <div class="restroNum">{{order.woDate}}</div>
+        </div>
+        <div class="elecoBtn">
+          <ion-icon name="arrow-dropright"></ion-icon>
+        </div>
+      </ion-item>
+    </div>
+
+  </div>
+</ion-content>
+<ion-footer>
+  <div class="main_foot">
+    <a class="sub_foot" (click)="doRefresh('PAST')">
+      <img src="./assets/imgs/tab/tab1.svg">
+      <p> History</p>
+    </a>
+    <a class="sub_foot" (click)="doRefresh('NOW')">
+      <img src="./assets/imgs/tab/tab2.svg">
+      <p>Current</p>
+    </a>
+    <a class="sub_foot" (click)="doRefresh('FUTURE')">
+      <img src="./assets/imgs/tab/tab3.svg">
+      <p>Scheduled</p>
+    </a>
+  </div>
+</ion-footer>

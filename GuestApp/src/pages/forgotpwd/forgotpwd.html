@@ -1,0 +1,20 @@
+<ion-header no-border>
+  <ion-navbar color="custom">
+    <ion-title color="white">Forgotpwd?</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-item>
+    <ion-label floating>Email</ion-label>
+    <ion-input type="email" [(ngModel)]="useremail"></ion-input>
+  </ion-item>
+
+  <div class="forgot_controllers">
+    <div>
+      <button ion-button round color="mainbtn" (click)="resetPassword()">Reset</button>
+    </div>
+    <div>
+      <button ion-button round color="mainbtn" outline (click)="closeForgotModal()">Close</button>
+    </div>
+  </div>
+</ion-content>

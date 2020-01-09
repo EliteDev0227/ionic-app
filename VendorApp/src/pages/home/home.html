@@ -1,0 +1,37 @@
+<ion-header no-border>
+  <ion-navbar color="custom">
+    <button ion-button menuToggle>
+      <img src="assets/imgs/menu.png">
+    </button>
+    <ion-title class="top_title"> Dashboard</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content no-padding>
+  <div class="top_content">
+    <p> Welcome back {{currentUser.full_name}}</p>
+  </div>
+  <ion-list>
+    <div class="content_tile">
+      <img src="./assets/imgs/menu/mu.png" alt="">
+      Open Workorders</div>
+    <ion-item *ngFor="let order of  workprogress let id=index" (click)="viewData(id)">
+      <div class="elencoImg"><img src="./assets/imgs/menu/working.svg" alt=""></div>
+      <div class="elencoTxt">
+        <div class="restroName">
+          <p>{{order.woDesc}}<p>
+        </div>
+        <div class="restroDes">
+          <p>{{order.UnitAddress}}<p>
+        </div>
+        <div class="restroNum"><a> Date: {{order.woDate}} &nbsp;&nbsp; Status:{{order.woStatus2}} </a>
+        </div>
+      </div>
+    </ion-item>
+    <div class="end_content">
+
+      <button ion-button block round outline expand="block"  color="mainbtn" (click)="viewAll()">
+            VIEW ALL
+          </button>
+    </div>
+  </ion-list>
+</ion-content>

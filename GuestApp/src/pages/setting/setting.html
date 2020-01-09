@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar color="custom">
+    <ion-title>Settings</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content no-padding>
+  <div class="content_tile">Push Notifications</div>
+  <ion-item>
+    <ion-label>Specials</ion-label>
+    <ion-toggle [(ngModel)]="special"></ion-toggle>
+  </ion-item>
+  <ion-item>
+    <ion-label>Deals</ion-label>
+    <ion-toggle [(ngModel)]="deals"></ion-toggle>
+  </ion-item>
+  <div class="settingBtn" (click)="confirm()">
+      <button ion-button round class="changeBtn">Save</button>
+  </div>
+</ion-content>

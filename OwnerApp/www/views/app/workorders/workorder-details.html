@@ -1,0 +1,86 @@
+<div class="modal workorder-details">
+    <ion-header-bar class="bar bar-header bar-positive">
+        <h1 class="title">Job: {{workorder.title}}</h1>
+        <div class="button button-clear" ng-click="modal.hide()"><span class="icon ion-close"></span></div>
+    </ion-header-bar>
+    <ion-content has-header="true" padding="true">
+        <div class="row">
+            <div class="col">
+                <h4>Job Details</h4>
+
+                <p>{{workorder.woDesc}}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-50">
+               Reported By :
+            </div>
+            <div class="col-50">
+                <span>{{workorder.woRepoertedBy}}</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-50">
+               Taken By :
+            </div>
+            <div class="col-50">
+                <span>{{workorder.woTakenBy}}</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-50">
+               Assigned To :
+            </div>
+            <div class="col-50">
+                <span>{{workorder.woAssignedTo}} <i class="fa fa-info-circle"></i> </span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-50">
+               Date/Time:
+            </div>
+            <div class="col-50">
+                <span>{{workorder.woDate}} {{workorder.woTime}}</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-50">
+               Status  :
+            </div>
+            <div class="col-50">
+                <span class="{{workorder.woStatus}}">{{workorder.woStatus}}</span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-50">
+               Reported By :
+            </div>
+            <div class="col-50">
+                <span>{{workorder.woRepoertedBy}}</span>
+            </div>
+        </div>
+
+
+        <div ng-if="workorder.woStartDate==''" class="row">
+            <div class="col">
+                <b>STARTED</b><br>
+                <span class="calm">{{workorder.woStartDate}}</span>
+            </div>
+<div class="col">
+                <b>ENDED</b><br>
+                {{workorder.woEndDate}}
+            </div>
+
+        </div>
+
+
+        <ion-footer>
+            <div class="row">
+                <div class="col text-center"><button class="button button-assertive button-outline">Request a review</button></div>
+                <div class="col text-center"><button class="button button-assertive button-outline">Provide feedback</button></div>
+            </div>
+        </ion-footer>
+    </ion-content>
+
+</div>

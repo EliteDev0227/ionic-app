@@ -1,0 +1,85 @@
+<ion-side-menus enable-menu-with-back-views="false">
+  <ion-side-menu-content class="post-size-14px">
+    <ion-nav-bar class="bar app-top-bar">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+      </ion-nav-buttons>
+        <ion-nav-buttons side="right">
+        <!--<button class="button button-icon button-clear ion-gear-b" menu-toggle="right">-->
+        <!--</button>-->
+      </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent"></ion-nav-view>
+  </ion-side-menu-content>
+
+  <ion-side-menu side="left" class="main-menu" expose-aside-when="large">
+    <ion-content>
+      <ion-list>
+        <ion-item class="heading-item item item-avatar" nav-clear menu-close ui-sref="app.profile">
+          <div class="user-image-container">
+            <pre-img ratio="_1_1" helper-class="rounded-image">
+              <img class="user-image" ng-src="{{$storage.units[0].thumbnail}}" spinner-on-load>
+          	</pre-img>
+          </div>
+          <h2 class="greeting">Hi {{$storage.profile.sFirst_nm}}</h2>
+          <p class="message">Welcome back</p>
+        </ion-item>
+        <!--<ion-item class="item-icon-left" nav-clear menu-close ui-sref="app.bookmarks">-->
+          <!--<i class="icon ion-bookmark"></i>-->
+          <!--<h2 class="menu-text">Saved for later</h2>-->
+        <!--</ion-item>-->
+        <ion-item class="item-icon-left" nav-clear menu-close ui-sref="app.dashboard">
+          <i class="icon ion-radio-waves"></i>
+          <h2 class="menu-text">My Homes</h2>
+        </ion-item>
+         <ion-item class="item-icon-left" nav-clear menu-close ui-sref="app.document-archive">
+          <i class="icon ion-radio-waves"></i>
+          <h2 class="menu-text">Forms / Documents</h2>
+        </ion-item>
+         <!--<ion-item class="item-icon-left" nav-clear menu-close ui-sref="app.dashboard">-->
+          <!--<i class="icon ion-radio-waves"></i>-->
+          <!--<h2 class="menu-text">Work Orders</h2>-->
+        <!--</ion-item>-->
+         <!--<ion-item class="item-icon-left" nav-clear menu-close ui-sref="app.dashboard">-->
+          <!--<i class="icon ion-radio-waves"></i>-->
+          <!--<h2 class="menu-text">Reservations</h2>-->
+        <!--</ion-item>-->
+         <ion-item class="item-icon-left" nav-clear menu-close ui-sref="app.staff">
+          <i class="icon ion-radio-waves"></i>
+          <h2 class="menu-text">Staff</h2>
+        </ion-item>
+<ion-item class="item-icon-left" nav-clear menu-close ui-sref="app.property-management">
+          <i class="icon ion-radio-waves"></i>
+          <h2 class="menu-text">Property Management (PREVIEW)</h2>
+        </ion-item>
+
+        <ion-item class="item-icon-left" nav-clear menu-close ui-sref="app.wordpress">
+          <i class="icon ion-social-wordpress"></i>
+          <h2 class="menu-text">Our Blog</h2>
+        </ion-item>
+        <ion-item class="item-icon-left" nav-clear menu-close ui-sref="app.notifications">
+          <i class="icon fa fa-bullhorn ion-wand"></i>
+          <h2 class="menu-text">Notifications</h2>
+        </ion-item>
+        <ion-item class="item-icon-left" nav-clear menu-close ui-sref="app.miscellaneous">
+          <i class="icon ion-asterisk"></i>
+          <h2 class="menu-text">Miscellaneous</h2>
+        </ion-item>
+
+        <ion-item class="item-icon-left" nav-clear menu-close ui-sref="app.settings">
+          <i class="icon ion-gear-a"></i>
+          <h2 class="menu-text">Settings</h2>
+        </ion-item>
+          <ion-item class="item-icon-left" nav-clear menu-close ng-controller="AppCtrl" ng-click="showLogOutMenu()">
+          <i class="icon ion-log-out"></i>
+          <h2 class="menu-text">Log out</h2>
+        </ion-item>
+
+    </ion-list>
+    </ion-content>
+  </ion-side-menu>
+
+</ion-side-menus>

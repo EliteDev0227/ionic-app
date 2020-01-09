@@ -1,0 +1,152 @@
+page-phoneauth {
+  .content-bg {
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+
+  .logo {
+    margin: auto !important;
+    padding: 0.3em 0 0.2em 0 !important;
+  }
+
+  ion-icon {
+    display: inline-block;
+    font-size: 4.0em;
+  }
+
+  h2 {
+    margin-top: 1.8rem;
+  }
+
+  ion-input {
+    margin: 2px;
+  }
+
+  .item-md {
+    padding-left: 0px !important;
+    margin-top: 10px;
+  }
+
+  .item-md.item-block .item-inner {
+    padding-right: 0px !important;
+  }
+
+  .label-md {
+    margin: 0px !important;
+  }
+
+  .list-form {
+    margin-top: 10px;
+  }
+
+  .item-inner {
+    box-shadow: none !important;
+  }
+
+  label {
+    font-family: inherit;
+    font-size: 1.5rem;
+  }
+
+  .smsCode {
+    width: 55%;
+    text-align: center;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+  }
+
+  h3 {
+    margin-top: 0px;
+  }
+
+  .text-input-md {
+    text-align: center;
+  }
+
+  progress {
+    width: 100%;
+    height: 5px;
+    border-radius: 5px;
+  }
+
+  .button-md {
+    height: 5rem;
+    border-radius: 5px;
+  }
+
+  .item-md .item-button {
+    padding: 0 0.6em;
+    height: 5rem;
+    font-size: 1.7rem;
+  }
+
+  .codiceWrap {
+    padding: 40px;
+    text-align: center;
+  }
+
+  .codiceTxt {
+    font-size: 1.8rem;
+    padding-bottom: 30px;
+  }
+
+  .codiceInput input {
+    height: 60px;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    padding: 0 15px;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .loadingBar {
+    height: 5px;
+    background: #cccccc;
+    margin-top: 35px;
+    margin-bottom: 40px;
+    position: relative;
+  }
+
+  .loadingBar:after {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background: #7cad31;
+    content: '';
+    display: block;
+  }
+
+  .bottomTxt {
+    color: #999999;
+  }
+
+  .alertTxt {
+    color: #7cad31;
+    font-weight: bold;
+  }
+
+  .bottomTxt a {
+    text-decoration: none;
+    color: #7cad31;
+  }
+
+  .progress-outer {
+    width: 100%;
+    margin: 10px 2%;
+    text-align: center;
+    background-color: #f4f4f4;
+    border: 1px solid #dcdcdc;
+    color: #fff;
+    border-radius: 5px;
+  }
+
+  .progress-inner {
+    min-width: 15%;
+    white-space: nowrap;
+    overflow: hidden;
+    border-radius: 5px;
+    height: 5px;
+    background-color: map-get($colors, primary);
+  }
+}

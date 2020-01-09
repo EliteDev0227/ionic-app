@@ -1,0 +1,243 @@
+page-home {
+  .home_menu {
+    padding: 10px;
+
+    button {
+      width: 2.2em;
+      height: 2em;
+    }
+  }
+
+  .content {
+    background: white !important;
+  }
+
+  img {
+    max-width: 25px;
+    width: 30px;
+    border: 0;
+  }
+
+  .toolbar-title-md {
+    color: #fff;
+    font-weight: bold;
+  }
+
+  ion-slides {
+    height: 70%;
+
+    ion-slide {
+      p {
+        font-family: "Ayuthaya";
+        font-size: 0.9em;
+        position: absolute;
+        bottom: 10px;
+        right: 0xp;
+        right: 10px;
+        color: white;
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  .skip_btn {
+    margin-top: 5px;
+    text-align: center;
+  }
+
+  button {
+    font-family: "Ayuthaya";
+    font-size: 16pt;
+  }
+
+  ion-slides {
+    height: 30%;
+    margin-top: 0px;
+    border-top: 1px solid white;
+    width: 100%;
+  }
+
+  .home_title {
+    background: #0cb3e0;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.7rem;
+    color: white;
+    font-weight: bold;
+  }
+
+  .mainCont {
+    display: flex;
+    margin: 20px;
+    margin-bottom: 0px;
+  }
+
+  .mainCont.mid {
+    margin-top: 0px;
+  }
+
+  .subCont {
+    flex: 1;
+    padding-left: 15px;
+    padding-top: 20px;
+    padding-right: 15px;
+    text-align: center;
+    border-right: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    overflow: hidden;
+
+    img {
+      min-width: 40px;
+      // height: 40px;
+    }
+
+    p {
+      margin: 0px;
+      padding-bottom: 10px;
+      font-size: 1.3rem;
+    }
+  }
+
+  .subCont.right {
+    border-right: none;
+
+    a {
+      color: black;
+      text-decoration: none;
+    }
+  }
+
+  .arrival {
+    margin: 20px;
+    border-radius: 10px;
+    border: 1px solid #e5e5e5;
+    background: #e5e5e5;
+  }
+
+  .arrival_title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #ddd;
+    font-size: 1.6rem;
+    font-family: "varela_roundregular";
+  }
+
+  .arrival_content {
+    text-align: center;
+    padding: 10px;
+    color: #757474;
+  }
+
+  .arrival_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 10px;
+  }
+
+  .weather_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 10px;
+    padding-top: 20px;
+  }
+
+  .arrival_phone {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #0cb3e0;
+
+    a {
+      color: #0cb3e0;
+      text-decoration: none;
+    }
+  }
+
+  .homebtn {
+    height: 30px;
+    border: 2px solid;
+    text-transform: none;
+  }
+
+  .arrival_weather {
+    display: flex;
+  }
+
+  .weather_sub {
+    flex: 1;
+    text-align: center;
+  }
+
+  .weather_sub img {
+    min-width: 50px;
+    height: 50px;
+    margin-top: 5px;
+  }
+
+  .weather_sub p {
+    margin: 0px;
+    color: #0cb3e0;
+  }
+
+  // card part
+  .top_content {
+    ion-card {
+      position: relative;
+      // text-align: left;
+      border: 2px solid #676060;
+
+      img {
+        height: 17rem;
+        background: rgba(0, 0, 0, 0.5);
+        width: 100%;
+        max-width: 100%;
+      }
+
+      .category-bg {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(39, 44, 48, 0.3) 40%, rgba(62, 69, 76, 0.3) 60%, rgba(85, 95, 104, 0.3));
+      }
+    }
+
+    .card-title {
+      position: absolute;
+      top: 1rem;
+      width: 100%;
+      height: 3.5rem;
+
+      // background: rgba(200, 66, 244, 0.6);
+      // border-bottom: 2px solid #676060;
+      p {
+        font-weight: bold;
+        color: white;
+        margin: 2% 2%;
+        font-size: 1.6rem;
+      }
+    }
+
+    .card-subtitle {
+      font-size: 1.6rem;
+      position: absolute;
+      bottom: 5%;
+      right: 5%;
+      width: 100%;
+      color: #fff;
+      text-align: right;
+
+      ion-icon {
+        font-size: 2rem !important;
+        font-weight: bold;
+      }
+    }
+  }
+
+}

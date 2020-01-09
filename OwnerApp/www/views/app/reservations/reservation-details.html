@@ -1,0 +1,48 @@
+<div class="modal">
+    <ion-header-bar class="bar bar-header bar-positive bar-{{reservation.Code}} ">
+        <h1 class="title">Lease: {{reservation.confno}}</h1>
+        <div class="button button-clear" ng-click="modal.hide()"><span class="icon ion-close"></span></div>
+    </ion-header-bar>
+    <ion-content has-header="true" padding="true">
+        <div class="row">
+            <div class="col">
+                <h2><span class="calm">{{reservation.sPrintOnCheckAs_nm}}</span> </h2>
+                <p>{{reservation.sArrival_tm}}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+
+                <h2 class="text-right positive">{{reservation.Rent}}</h2>
+
+            </div>
+
+            </div>
+        <hr>
+        <div class="row">
+            <div class="col">
+                <b>CHECK-IN</b><br>
+                <span class="calm">{{reservation.arrive}}</span>
+            </div>
+            <div class="col">
+                <b>CHECK-OUT</b><br>
+                <span class="calm">{{reservation.depart}}</span>
+            </div>
+
+            <div class="col">
+                <b>NIGHTS</b><br>
+                <span class="calm">{{reservation.Nights}}</span>
+            </div>
+
+        </div>
+
+
+        <ion-footer>
+            <div class="row">
+
+                <div class="col"><button ng-click="modal.hide();" class="button button-positive button-block">Close</button></div>
+            </div>
+        </ion-footer>
+    </ion-content>
+
+</div>

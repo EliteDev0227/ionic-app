@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar color="custom">
+    <ion-title>{{currentArraction.name}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+<ion-content no-padding>
+  <ion-grid>
+    <ion-scroll #scroll scrollX="true" style="height: 4em">
+        <div style="display: flex">
+            <div *ngFor="let res of arractionData; let i=index;">
+                <button ion-button id="{{'btn_num_' + i}}" [color]="i==current_selected?'primary':'white'" (click)="selectCategory(i)">
+                  <p>{{res.name}}</p>
+                </button>
+              </div>
+        </div>
+    </ion-scroll>
+  </ion-grid>
+  <ion-list>
+    <div class="content_tile">
+      <img src="./assets/imgs/attract/mu.png" alt="">
+      {{currentArraction.name}}</div>
+    <ion-item *ngFor="let subMenu of  currentArraction.items let id=index" (click)="viewData(currentArraction.items[id])">
+      <div class="elencoImg"><img src="{{subMenu.image}}" alt=""></div>
+      <div class="elencoTxt">
+        <div class="restroName">
+          <p>{{subMenu.title}}<p>
+        </div>
+        <div class="restroDes">
+          <p>{{subMenu.address}}<p>
+        </div>
+        <div class="restroNum"><a>{{subMenu.phone}}</a>
+        </div>
+      </div>
+      <div class="elecoBtn">
+          <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </div>
+    </ion-item>
+  </ion-list>
+</ion-content>

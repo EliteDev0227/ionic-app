@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar color="custom">
+    <ion-title>Browse Homes</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content no-padding>
+
+  <div class="row categories-list">
+      <div  *ngFor="let category of resData" class="col col-50">
+        <a class="feed-category" (click)="viewRentData(category.id, category.feed_sources)">
+          <img class="category-image" src="{{category.image}} " alt=""/>
+          <div class="category-bg"></div>
+          <span class="category-title">{{category.title}}</span>
+        </a>
+      </div>
+    </div>
+
+</ion-content>

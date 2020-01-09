@@ -1,0 +1,52 @@
+page-main {
+  .content-bg {
+    background-image: url(../assets/imgs/bg-gif.gif);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    font-family: 'Cairo';
+    font-weight: bold;
+    top: 0;
+    left: 0;
+  }
+
+  .main_container {
+    position: absolute;
+    width: 90%;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    // background: rgba(0, 0, 0, 0.06);
+    padding: 10px;
+  }
+
+  .main_image {
+    text-align: center;
+    font-family: "MuseoSans500";
+    font-size: 2.2em;
+    color: #058CC3;
+    margin-top: 10vh;
+  }
+
+  .signin_signinbtn {
+    position: absolute;
+    width: 95%;
+    left: 50%;
+    bottom: 0%;
+    transform: translate(-50%, -50%);
+
+    // background: rgba(0, 0, 0, 0.06);
+    button {
+      font-family: "Roboto";
+      font-size: 1.2em;
+      background: #4fc425;
+      opacity: 0.9;
+      text-transform: none;
+    }
+
+    .sign_up {
+      margin-top: 5px;
+      background: #4286f4;
+      text-transform: none;
+    }
+  }
+}

@@ -1,0 +1,65 @@
+page-forgotpwd {
+  ion-content {
+    background-image: url("../assets/imgs/bg-back.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+  }
+
+  .forgot_controllers {
+    width: 100%;
+    text-align: center;
+    margin-top: 5vh;
+    display: flex;
+
+    div {
+      width: 100%;
+      padding: 0 10px;
+      flex: 1;
+
+      button {
+        width: 100%;
+      }
+    }
+  }
+
+  .ion-item {
+    margin-top: 5rem;
+  }
+
+  p {
+    text-align: center;
+    font-size: 2rem;
+    color: #058CC3;
+    font-family: MuseoSans500;
+  }
+
+  .main_cont {
+    color: #058CC3;
+    margin-top: 1vh;
+
+    ion-input {
+      border: 1px solid #ddd;
+      border-radius: 1rem;
+      margin-top: 1rem;
+      padding-left: 1rem;
+      font-weight: bold;
+      font-size: 1.5rem;
+      margin-top: 2rem;
+    }
+  }
+
+  .main_top {
+    .main_image {
+      text-align: center;
+      font-family: "MuseoSans500";
+      font-size: 2.2em;
+      color: #058CC3;
+      margin-top: 2vh;
+    }
+
+    img {
+      opacity: 0.5;
+    }
+  }
+}

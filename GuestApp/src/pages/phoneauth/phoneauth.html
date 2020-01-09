@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar color="custom">
+    <ion-title>Enter SMS code</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+    <div class="codiceWrap">
+        <div class="codiceTxt">We sent a text message with the<br>code to the  {{phoneNumber}}</div>
+          <div class="codiceInput">
+            <ion-input type="tel" [(ngModel)]="authCode" placeholder="SMS Code" (ionChange)='onChangeTime()'></ion-input>
+          </div>
+          <div class="progress-outer" *ngIf="verifyCode==true">
+              <div class="progress-inner" [style.width]="progress + '%'">
+              </div>
+          </div>
+          <div class="alertTxt" *ngIf="verifyCode==false" (click)="backPhonePage()">I didn't get the code</div>
+      </div>
+</ion-content>

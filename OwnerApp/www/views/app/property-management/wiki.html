@@ -1,0 +1,51 @@
+<ion-view class="property-wiki-view">
+
+  <ion-nav-title>
+    <span class="dark">Property Wiki</span>
+  </ion-nav-title>
+  <ion-content class="light-bg">
+
+    <ion-list>
+
+      <div class="row item" ng-repeat="(title, value) in wiki track by $index">
+        <div class="col text-left">{{title}}</div>
+        <div class="col text-right font_bold">{{value}}</div>
+
+      </div>
+
+
+      <div class="item item-divider">
+        Amenities
+      </div>
+
+      <div class="row item" ng-repeat="(title, value) in wiki.amenities track by $index">
+        <div class="col text-left">{{title}}</div>
+        <div class="col text-right font_bold">{{value}}</div>
+
+      </div>
+
+
+      <div ng-repeat="(key,group) in wiki track by key">
+        <ion-item class="item-stable"
+                  ng-click="toggleGroup(group)"
+                  ng-class="{active: isGroupShown(group)}">
+          <i class="icon" ng-class="isGroupShown(group) ? 'ion-minus' : 'ion-plus'"></i>
+          &nbsp;
+          Group {{key}}
+        </ion-item>
+        <ion-item class="item-accordion"
+                  ng-repeat="item in group track by $index"
+                  ng-show="isGroupShown(group)">
+          {{item}}
+        </ion-item>
+      </div>
+    </ion-list>
+
+    <div class="row padding-top padding-bottom">
+     {{wiki | json}}
+    </div>
+
+
+
+  </ion-content>
+</ion-view>

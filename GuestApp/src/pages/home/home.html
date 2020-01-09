@@ -1,0 +1,134 @@
+<ion-header no-border>
+  <ion-navbar color="custom">
+    <button ion-button menuToggle>
+      <img src="assets/imgs/menu.png">
+    </button>
+    <ion-title> My Trips </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content no-padding>
+  <div class="top_content" *ngIf="!userFlag">
+    <ion-card *ngFor="let res of leaseData.trips; let idx=index" (click)="viewCatData(idx)">
+      <img src="{{res.unit_thumbnail}}" />
+      <div class="category-bg"></div>
+      <div class="card-title">
+        <p>{{res.unit_name}}<p>
+            <p>{{res.arrival_date}}~{{res.departure_date}}<p>
+      </div>
+      <div class="card-subtitle">VIEW
+        <ion-icon ios="ios-arrow-round-forward" md="md-arrow-round-forward"></ion-icon>
+      </div>
+    </ion-card>
+  </div>
+
+  <div class="top_content" *ngIf="userFlag">
+    <ion-card>
+      <img src="{{guestData.UnitInfo.thumbnail}}" />
+      <div class="category-bg"></div>
+      <div class="card-title">
+        <p>{{guestData.UnitInfo.name}}<p>
+            <p>{{guestData.TripInfo.arrival_date}}~{{guestData.TripInfo.departure_date}}<p>
+      </div>
+    </ion-card>
+  </div>
+
+  <div class="home_title">
+    <p>{{firstName}} &nbsp;{{lastName}}</p>
+    <!-- <p>{{leaseData.profile.first_name}} &nbsp;{{leaseData.profile.last_name}}</p> -->
+  </div>
+  <div class="mainCont">
+    <div class="subCont" (click)="viewAttractionData()"><img src="./assets/imgs/home/attraction.png">
+      <p>Local<br> Attractions</p>
+    </div>
+    <div class="subCont" (click)="viewEatData()"><img src="./assets/imgs/home/eat.png">
+      <p>Please<br> To Eat</p>
+    </div>
+    <div class="subCont right" (click)="viewEventData()"><img src="./assets/imgs/home/event.png">
+      <p>Upcoming <br>Events</p>
+    </div>
+  </div>
+  <div class="mainCont mid">
+    <div class="subCont" (click)="viewDealData()"><img src="./assets/imgs/home/deal.png">
+      <p>Siebert<br>Coupons</p>
+    </div>
+    <div class="subCont" (click)="viewReportData()" *ngIf="current_user"><img src="./assets/imgs/home/report.png">
+      <p>Report <br>Maintenance</p>
+    </div>
+    <div class="subCont right" (click)="viewCallData()"><img src="./assets/imgs/home/call.png">
+      <a href="tel:757 426 6200 ">
+        <p>Call Our <br>Office</p>
+      </a>
+    </div>
+  </div>
+  <div class="arrival" *ngIf="current_user">
+    <div class="arrival_title">
+      <p>Your Arrival</p> &nbsp;&nbsp;
+      <img src="./assets/imgs/home/car.png">
+    </div>
+    <div class="arrival_content">
+      <p>Check in time is 3pm, come to our rental office at 601 Sandbrige Road. Upon arrival, you'll be given a Check
+        in Packet containing your keys and information about our area. </p>
+    </div>
+    <div class="arrival_btn">
+      <button ion-button outline color="homecolor" class="homebtn" (click)="viewArrivalData()">See All</button>
+    </div>
+  </div>
+
+  <div class="arrival" *ngIf="current_user">
+    <div class="arrival_title">
+      <p>Rental Phone</p> &nbsp;&nbsp;
+      <img src="./assets/imgs/home/phone.png">
+    </div>
+    <div class="arrival_phone" (click)="viewPhoneData()">
+      <!-- <a >757 426 6200</a><br> -->
+      <p>757 426 6200</p>
+    </div>
+  </div>
+
+  <div class="arrival" *ngIf="current_user">
+    <div class="arrival_title">
+      <p>Invite Others</p> &nbsp;&nbsp;
+      <img src="./assets/imgs/home/invite.png">
+    </div>
+    <div class="arrival_content">
+      <p>Invite others in your traveling party to download the app to make the most of your vacation.</p>
+    </div>
+    <div class="arrival_btn">
+      <button ion-button outline color="homecolor" class="homebtn" (click)="viewInviteData()">Inivte Guests</button>
+    </div>
+  </div>
+  <div class="arrival">
+    <div class="arrival_title">
+      <p>Sandbridge Weather</p> &nbsp;&nbsp;
+      <img src="./assets/imgs/home/weather.png">
+    </div>
+    <div class="arrival_weather">
+
+      <div class="weather_sub">
+        <img src="assets/imgs/weather/{{forcastData[0]?.icon}}.png">
+        <p>{{getDayName(1)}} </p>
+        <p>{{forcastData[1]?.temperatureMax}}°F</p>
+        <!-- <p>{{changeTeamp(forcastData[0]?.temperatureMax)}}°F</p> -->
+
+      </div>
+      <div class="weather_sub">
+        <img src="assets/imgs/weather/{{forcastData[1]?.icon}}.png">
+        <p>{{getDayName(2)}} </p>
+        <p>{{forcastData[2]?.temperatureMax}}°F</p>
+        <!-- <p>{{changeTeamp(forcastData[1]?.temperatureMax)}}°F</p> -->
+
+      </div>
+      <div class="weather_sub">
+        <img src="assets/imgs/weather/{{forcastData[2]?.icon}}.png">
+        <p>{{getDayName(3)}}</p>
+        <p>{{forcastData[3]?.temperatureMax}}°F</p>
+        <!-- <p>{{changeTeamp(forcastData[2]?.temperatureMax)}}°F</p> -->
+
+      </div>
+    </div>
+    <div class="weather_btn">
+      <button ion-button outline color="homecolor" class="homebtn" (click)="viewWeatherData()">View Week Forecast</button>
+    </div>
+  </div>
+
+</ion-content>

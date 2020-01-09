@@ -1,0 +1,96 @@
+page-sidemenu {
+  .topInfo {
+    text-align: center;
+    color: #fff;
+  }
+  .proName {
+    margin-top: 15px;
+    font-size: 1.8rem;
+    padding: 3px 0 10px;
+    font-weight: bold;
+  }
+
+  .proNum a {
+    color: #838790;
+    text-decoration: none;
+    padding: 5px 0;
+    font-size: 1.6rem;
+    font-weight: bold;
+  }
+
+  .proId {
+    color: #838790;
+    margin-bottom: 20px;
+    font-size: 1.6rem;
+    font-weight: bold;
+  }
+
+  .topProIcon {
+    text-align: center;
+    padding-top: 35px;
+
+  }
+
+  .content{
+    // background-color: #2b323c;
+    background-image: linear-gradient(to top, #114f61, #2b323c);
+  }
+
+  .item{
+    // background-image: linear-gradient(to bottom, #114f61, #2b323c);
+    background-color: transparent;
+    color: #fff;
+    font-weight: bold;
+  }
+
+  .navTxt {
+    margin-left: 20px;
+    vertical-align: middle;
+    font-size: 1.5rem;
+  }
+
+  .profilePhoto {
+    width: 80px;
+    height: 80px;
+    border-radius: 160px;
+    border: 1px solid #ddd;
+  }
+  .menebtn {
+    font-size: 17px;
+    text-decoration: none;
+    height: 45px;
+    padding-left: 25px;
+    padding-right: 20px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .menutitleBtn {
+    background: #ddd !important;
+
+    .item-inner {
+      color: rgb(41, 39, 39);
+      height: auto;
+    }
+  }
+
+  .imgSize {
+    text-align: center;
+    width: 20px;
+    vertical-align: text-top;
+  }
+
+  .label {
+    margin: 13px 8px 13px 0;
+  }
+
+  .item-ios[detail-push] .item-inner,
+  button.item-ios:not([detail-none]) .item-inner,
+  a.item-ios:not([detail-none]) .item-inner {
+    background-image: none;
+  }
+
+  .menu-inner {
+    width: 85%;
+  }
+}

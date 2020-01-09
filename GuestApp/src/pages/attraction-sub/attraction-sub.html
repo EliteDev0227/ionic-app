@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar color="custom">
+    <ion-title>{{currentData.name}}</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content no-padding>
+    <div class="modal_top">
+        <img src="{{currentData.image}}" alt="">
+        <div class="modal_title">
+          <p>{{currentData.title}}</p>
+          <div class="modal_share">
+            <div class="sub_share" (click)="getPhoneCall()">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <p>Call</p>
+            </div>
+            <div class="sub_share" (click)="showMap()">
+                <i class="fa fa-map-o" aria-hidden="true"></i>
+                <p>Directions</p>
+            </div>
+            <div class="sub_share" (click)="getShareContent()">
+                <i class="fa fa-share-alt" aria-hidden="true"></i>
+                <p>Share</p>
+            </div>
+            <div class="sub_share" (click)="viewSite()">
+                <i class="fa fa-globe" aria-hidden="true"></i>
+                <p>Website</p>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="modal_content">{{currentData.desc}}</div>
+    <div class="modal_button">
+        <button ion-button round full color="mainbtn" (click)="close()"> OK</button>
+    </div>
+
+</ion-content>

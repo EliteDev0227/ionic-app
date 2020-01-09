@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar color="custom">
+    <ion-title>{{resData.title}}</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content no-padding>
+  <ion-card *ngFor="let feeds of feedsData let idx=index">
+    <ion-item class="blog_tile">
+      <ion-avatar item-start>
+        <img src="./assets/imgs/blog/blog.png">
+      </ion-avatar>
+      <div class="card_title">{{feeds.title}}</div>
+      <div class="card_sub_title">Published {{feeds.pubDate | amTimeAgo}}</div>
+    </ion-item>
+    <ion-item>
+      <div class="card_content" [innerHTML]="feeds.description"></div>
+    </ion-item>
+    <div class="mainCont">
+      <div class="subCont1" (click)="bookmarkPost(idx)">
+        <ion-icon ios="ios-bookmark" md="md-bookmark"></ion-icon>
+      </div>
+      <div class="subCont2" (click)="viewPostData(idx)">
+        <button ion-button block small class="confirm_btn">Read more</button>
+      </div>
+    </div>
+  </ion-card>
+  <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading more data...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>

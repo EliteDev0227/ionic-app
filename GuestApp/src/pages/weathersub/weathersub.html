@@ -1,0 +1,75 @@
+<ion-header>
+  <ion-navbar color="custom">
+    <ion-title style="text-align:center;">{{CurrentDate}}</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="close()">
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+<ion-content no-padding>
+  <div class="top_cont">
+    <div class="sub_cont">
+      <img src="./assets/imgs/weather/{{weatherData.icon}}.png">
+    </div>
+    <div class="top_cont_txt">
+      <p>{{weatherData.summary}}</p>
+    </div>
+  </div>
+  <div class="main_content">
+    <div class="main_content_title">
+      <p>Details</p>
+    </div>
+    <div class="detail_content">
+      <div class="start_detail_content">
+        <img src="./assets/imgs/weather/w5.png">
+      </div>
+      <div class="end_details_content">
+        <div class="temp_title">Temperature</div>
+        <p>{{weatherData.temperatureMax}}°C</p>
+        <p>{{weatherData.temperatureMin}}°C</p>
+      </div>
+    </div>
+    <div class="detail_content">
+      <div class="start_detail_content">
+        <img src="./assets/imgs/weather/w3.png">
+      </div>
+      <div class="end_details_content">
+        <div class="temp_title">Humidity</div>
+        <p>{{weatherData.humidity}}</p>
+      </div>
+    </div>
+    <div class="detail_content">
+      <div class="start_detail_content">
+        <img src="./assets/imgs/weather/w1.png">
+      </div>
+      <div class="end_details_content">
+        <div class="temp_title">Could Server</div>
+        <p>{{weatherData.cloudCover}}</p>
+      </div>
+    </div>
+    <div class="detail_content">
+      <div class="start_detail_content">
+        <img src="./assets/imgs/weather/w4.png">
+      </div>
+      <div class="end_details_content">
+        <div class="temp_title">Probablity of Precipitation</div>
+        <p>{{weatherData.precipType}}</p>
+        <p>{{weatherData.precipProbability}}</p>
+      </div>
+    </div>
+    <div class="detail_content">
+      <div class="start_detail_content">
+        <img src="./assets/imgs/weather/w2.png">
+      </div>
+      <div class="end_details_content">
+        <div class="temp_title">Wind Speed</div>
+        <p>{{weatherData.windSpeed}} km/h</p>
+      </div>
+    </div>
+  </div>
+  <br><br>
+
+</ion-content>

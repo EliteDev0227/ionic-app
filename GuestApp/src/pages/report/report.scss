@@ -1,0 +1,48 @@
+page-report {
+  .top_cont {
+    text-align: center;
+
+    p {
+      font-size: 1.6rem;
+    }
+  }
+
+  .report_cont {
+    margin-top: 7px;
+    text-align: center;
+  }
+
+  .upload-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    img{
+      height: 130px;
+    }
+  }
+
+  .item-input ion-textarea {
+    border: solid 1px #eee;
+    overflow: hidden;
+  }
+  .upload-btn {
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    button{
+      width: 60%;
+      height: 35px;
+    }
+  }
+  .footer-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+    button{
+      margin: 10px;
+    }
+  }
+}

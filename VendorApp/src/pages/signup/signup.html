@@ -1,0 +1,28 @@
+<ion-header no-border>
+  <ion-navbar color="custom">
+    <ion-title color="white" style="text-align: center">Sign Up</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <div class="main_top">
+    <div class="main_image">
+      <img src="assets/imgs/siebert.png" />
+    </div>
+  </div>
+  <div class="main_cont">
+    <div class="userCont">
+        <ion-input type="email" [(ngModel)]="user.email" placeholder="Email"></ion-input>
+    </div>
+    <div class="userCont">
+        <ion-input type="password" [(ngModel)]="user.pwd" placeholder="Password"></ion-input>
+    </div>
+  </div>
+  <div class="signup_controllers">
+    <div>
+      <button ion-button round full color="mainbtn" (click)="registerUser()" class="confirm_btn">Register</button>
+    </div>
+    <div>
+      <button ion-button round full (click)="closeSignupModal()" class="confirm_btn">Cancel</button>
+    </div>
+  </div>
+</ion-content>

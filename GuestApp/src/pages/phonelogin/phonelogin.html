@@ -1,0 +1,21 @@
+<ion-content padding>
+  <div class="signin_container">
+    <p class="signin_title">
+      Guest Login with Phone Number
+    </p>
+    <div class="main_cont">
+      <ion-input type="tel" [(ngModel)]="guest.phone" placeholder="Phone Number"></ion-input>
+      <ion-input type="tel" [(ngModel)]="guest.shareCode" placeholder="Share Code"></ion-input>
+    </div>
+    <div class="signup_controllers">
+        <div>
+          <button ion-button round block outline color="mainbtn" (click)="withPhoneLogin()">Register</button>
+        </div>
+        <div>
+          <button ion-button round block outline color="danger" (click)="closeModal()">Cancel</button>
+        </div>
+      </div>
+
+
+  </div>
+</ion-content>
