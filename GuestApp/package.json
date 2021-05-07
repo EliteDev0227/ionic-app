@@ -84,7 +84,7 @@
     "rxjs": "5.5.2",
     "sw-toolbox": "3.6.0",
     "uk.co.workingedge.phonegap.plugin.launchnavigator": "^4.2.2",
-    "underscore": "^1.9.1",
+    "underscore": "^1.12.1",
     "zone.js": "0.8.18"
   },
   "devDependencies": {
